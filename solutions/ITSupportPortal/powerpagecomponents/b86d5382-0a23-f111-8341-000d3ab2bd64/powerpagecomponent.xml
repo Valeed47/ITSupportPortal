@@ -1,0 +1,238 @@
+<powerpagecomponent powerpagecomponentid="b86d5382-0a23-f111-8341-000d3ab2bd64">
+  <content>{
+  "filecontent": null,
+  "partialurl": "managerdashboard",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": false,
+  "sharedpageconfiguration": true,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "isofflinecached": false,
+  "rootwebpageid": "a2f45a7c-0a23-f111-8341-000d3ab2bd64",
+  "copy": "&lt;div class=\"hero hero--manager\" style=\"padding: 16px 16px 14px;\"&gt;\n  &lt;p class=\"hero-eyebrow hero-eyebrow--manager\"&gt;IT Manager view&lt;/p&gt;\n  &lt;h1&gt;Manager dashboard&lt;/h1&gt;\n&lt;/div&gt;\n&lt;div id=\"pageWrapper\" class=\"page-wrapper\"&gt;\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"metric-grid\"&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Total this month&lt;/p&gt;\n        &lt;p class=\"metric-value\"&gt;142&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;+12 vs last month&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Open tickets&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--warn\"&gt;23&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;7 unassigned&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Resolved today&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--success\"&gt;8&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;Avg. 3.2h resolution&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Satisfaction score&lt;/p&gt;\n        &lt;p class=\"metric-value\"&gt;4.8&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;Out of 5.0&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"two-col\"&gt;\n      &lt;div class=\"card\" style=\"margin-bottom: 14px;\"&gt;\n        &lt;div class=\"card-head\"&gt;\n          &lt;h3&gt;Agent workload&lt;/h3&gt;\n          &lt;a href=\"#\" class=\"card-link\" style=\"color: #7c3aed;\"&gt;Manage →&lt;/a&gt;\n        &lt;/div&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Agent&lt;/th&gt;\n              &lt;th style=\"text-align: center;\" align=\"center\"&gt;Open&lt;/th&gt;\n              &lt;th style=\"text-align: center;\" align=\"center\"&gt;Resolved&lt;/th&gt;\n              &lt;th style=\"width: 110px;\"&gt;Load&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Mark Davis&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;&lt;span class=\"badge badge--med\"&gt;5&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;34&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;&lt;div class=\"bar-fill bar-fill--medium\" style=\"width: 55%;\"&gt;&lt;/div&gt;&lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;55%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Sarah Wong&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;&lt;span class=\"badge badge--high\"&gt;8&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;28&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;&lt;div class=\"bar-fill bar-fill--high\" style=\"width: 80%;\"&gt;&lt;/div&gt;&lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;80%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Ali Hassan&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;&lt;span class=\"badge badge--done\"&gt;3&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;41&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;&lt;div class=\"bar-fill bar-fill--low\" style=\"width: 30%;\"&gt;&lt;/div&gt;&lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;30%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr style=\"border-top: 0.5px solid #e5e7eb;\"&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;&lt;span class=\"badge badge--crit\"&gt;7&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;—&lt;/td&gt;\n              &lt;td style=\"font-size: 10px; color: #dc2626;\"&gt;Action needed&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n      &lt;div class=\"card\" style=\"margin-bottom: 14px;\"&gt;\n        &lt;div class=\"card-head\"&gt;&lt;h3&gt;Tickets by category&lt;/h3&gt;&lt;/div&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Category&lt;/th&gt;\n              &lt;th style=\"text-align: center;\" align=\"center\"&gt;Open&lt;/th&gt;\n              &lt;th style=\"text-align: center;\" align=\"center\"&gt;Total&lt;/th&gt;\n              &lt;th&gt;Avg time&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Software&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;9&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;52&lt;/td&gt;\n              &lt;td&gt;2.4h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Hardware&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;6&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;38&lt;/td&gt;\n              &lt;td&gt;4.1h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Access&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;5&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;31&lt;/td&gt;\n              &lt;td&gt;1.8h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Network&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;3&lt;/td&gt;\n              &lt;td style=\"text-align: center;\" align=\"center\"&gt;21&lt;/td&gt;\n              &lt;td&gt;3.6h&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"table-card\"&gt;\n      &lt;div class=\"table-card-head\"&gt;\n        &lt;h3&gt;Full ticket queue&lt;/h3&gt;\n        &lt;a href=\"#\" class=\"card-link\" style=\"color: #7c3aed;\"&gt;Export CSV →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"table-wrap\"&gt;\n        &lt;table&gt;\n          &lt;colgroup&gt;\n            &lt;col style=\"width: 70px;\" /&gt;\n            &lt;col style=\"width: 180px;\" /&gt;\n            &lt;col style=\"width: 70px;\" /&gt;\n            &lt;col style=\"width: 65px;\" /&gt;\n            &lt;col style=\"width: 75px;\" /&gt;\n            &lt;col style=\"width: 85px;\" /&gt;\n            &lt;col style=\"width: 55px;\" /&gt;\n          &lt;/colgroup&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;ID&lt;/th&gt;\n              &lt;th&gt;Title&lt;/th&gt;\n              &lt;th&gt;Employee&lt;/th&gt;\n              &lt;th&gt;Priority&lt;/th&gt;\n              &lt;th&gt;Status&lt;/th&gt;\n              &lt;th&gt;Agent&lt;/th&gt;\n              &lt;th&gt;&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0042&lt;/td&gt;\n              &lt;td&gt;Email password expired&lt;/td&gt;\n              &lt;td&gt;S. Patel&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--crit\"&gt;Critical&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color: #7c3aed;\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0041&lt;/td&gt;\n              &lt;td&gt;Laptop screen flickering&lt;/td&gt;\n              &lt;td&gt;J. Smith&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--med\"&gt;Medium&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--prog\"&gt;In progress&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;M. Davis&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color: #7c3aed;\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0040&lt;/td&gt;\n              &lt;td&gt;Teams camera not working&lt;/td&gt;\n              &lt;td&gt;L. Chen&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--med\"&gt;Medium&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color: #7c3aed;\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0039&lt;/td&gt;\n              &lt;td&gt;Cannot access Finance drive&lt;/td&gt;\n              &lt;td&gt;J. Smith&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--high\"&gt;High&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color: #7c3aed;\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0038&lt;/td&gt;\n              &lt;td&gt;Printer offline on floor 2&lt;/td&gt;\n              &lt;td&gt;R. Ahmed&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--low\"&gt;Low&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--hold\"&gt;On hold&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;M. Davis&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color: #7c3aed;\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Manager Dashboard</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div class="hero hero--manager" style="padding: 16px 16px 14px;"&gt;
+  &lt;p class="hero-eyebrow hero-eyebrow--manager"&gt;IT Manager view&lt;/p&gt;
+  &lt;h1&gt;Manager dashboard&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id="pageWrapper" class="page-wrapper"&gt;
+  &lt;main class="main"&gt;
+    &lt;div class="metric-grid"&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Total this month&lt;/p&gt;
+        &lt;p class="metric-value"&gt;142&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;+12 vs last month&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Open tickets&lt;/p&gt;
+        &lt;p class="metric-value metric-value--warn"&gt;23&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;7 unassigned&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Resolved today&lt;/p&gt;
+        &lt;p class="metric-value metric-value--success"&gt;8&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;Avg. 3.2h resolution&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Satisfaction score&lt;/p&gt;
+        &lt;p class="metric-value"&gt;4.8&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;Out of 5.0&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="two-col"&gt;
+      &lt;div class="card" style="margin-bottom: 14px;"&gt;
+        &lt;div class="card-head"&gt;
+          &lt;h3&gt;Agent workload&lt;/h3&gt;
+          &lt;a href="#" class="card-link" style="color: #7c3aed;"&gt;Manage →&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Agent&lt;/th&gt;
+              &lt;th style="text-align: center;" align="center"&gt;Open&lt;/th&gt;
+              &lt;th style="text-align: center;" align="center"&gt;Resolved&lt;/th&gt;
+              &lt;th style="width: 110px;"&gt;Load&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Mark Davis&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;&lt;span class="badge badge--med"&gt;5&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;34&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;&lt;div class="bar-fill bar-fill--medium" style="width: 55%;"&gt;&lt;/div&gt;&lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;55%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Sarah Wong&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;&lt;span class="badge badge--high"&gt;8&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;28&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;&lt;div class="bar-fill bar-fill--high" style="width: 80%;"&gt;&lt;/div&gt;&lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;80%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Ali Hassan&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;&lt;span class="badge badge--done"&gt;3&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;41&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;&lt;div class="bar-fill bar-fill--low" style="width: 30%;"&gt;&lt;/div&gt;&lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;30%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style="border-top: 0.5px solid #e5e7eb;"&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;&lt;span class="badge badge--crit"&gt;7&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;—&lt;/td&gt;
+              &lt;td style="font-size: 10px; color: #dc2626;"&gt;Action needed&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+      &lt;div class="card" style="margin-bottom: 14px;"&gt;
+        &lt;div class="card-head"&gt;&lt;h3&gt;Tickets by category&lt;/h3&gt;&lt;/div&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Category&lt;/th&gt;
+              &lt;th style="text-align: center;" align="center"&gt;Open&lt;/th&gt;
+              &lt;th style="text-align: center;" align="center"&gt;Total&lt;/th&gt;
+              &lt;th&gt;Avg time&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Software&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;9&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;52&lt;/td&gt;
+              &lt;td&gt;2.4h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Hardware&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;6&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;38&lt;/td&gt;
+              &lt;td&gt;4.1h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Access&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;5&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;31&lt;/td&gt;
+              &lt;td&gt;1.8h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Network&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;3&lt;/td&gt;
+              &lt;td style="text-align: center;" align="center"&gt;21&lt;/td&gt;
+              &lt;td&gt;3.6h&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="table-card"&gt;
+      &lt;div class="table-card-head"&gt;
+        &lt;h3&gt;Full ticket queue&lt;/h3&gt;
+        &lt;a href="#" class="card-link" style="color: #7c3aed;"&gt;Export CSV →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="table-wrap"&gt;
+        &lt;table&gt;
+          &lt;colgroup&gt;
+            &lt;col style="width: 70px;" /&gt;
+            &lt;col style="width: 180px;" /&gt;
+            &lt;col style="width: 70px;" /&gt;
+            &lt;col style="width: 65px;" /&gt;
+            &lt;col style="width: 75px;" /&gt;
+            &lt;col style="width: 85px;" /&gt;
+            &lt;col style="width: 55px;" /&gt;
+          &lt;/colgroup&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;ID&lt;/th&gt;
+              &lt;th&gt;Title&lt;/th&gt;
+              &lt;th&gt;Employee&lt;/th&gt;
+              &lt;th&gt;Priority&lt;/th&gt;
+              &lt;th&gt;Status&lt;/th&gt;
+              &lt;th&gt;Agent&lt;/th&gt;
+              &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0042&lt;/td&gt;
+              &lt;td&gt;Email password expired&lt;/td&gt;
+              &lt;td&gt;S. Patel&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--crit"&gt;Critical&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color: #7c3aed;"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0041&lt;/td&gt;
+              &lt;td&gt;Laptop screen flickering&lt;/td&gt;
+              &lt;td&gt;J. Smith&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--med"&gt;Medium&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--prog"&gt;In progress&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;M. Davis&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color: #7c3aed;"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0040&lt;/td&gt;
+              &lt;td&gt;Teams camera not working&lt;/td&gt;
+              &lt;td&gt;L. Chen&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--med"&gt;Medium&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color: #7c3aed;"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0039&lt;/td&gt;
+              &lt;td&gt;Cannot access Finance drive&lt;/td&gt;
+              &lt;td&gt;J. Smith&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--high"&gt;High&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color: #7c3aed;"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0038&lt;/td&gt;
+              &lt;td&gt;Printer offline on floor 2&lt;/td&gt;
+              &lt;td&gt;R. Ahmed&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--low"&gt;Low&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--hold"&gt;On hold&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;M. Davis&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color: #7c3aed;"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+Manager Dashboard</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

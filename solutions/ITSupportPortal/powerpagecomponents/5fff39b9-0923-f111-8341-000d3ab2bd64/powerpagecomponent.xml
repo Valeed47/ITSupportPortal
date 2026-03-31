@@ -1,0 +1,382 @@
+<powerpagecomponent powerpagecomponentid="5fff39b9-0923-f111-8341-000d3ab2bd64">
+  <content>{
+  "filecontent": null,
+  "partialurl": "mytickets",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": false,
+  "sharedpageconfiguration": true,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "isofflinecached": false,
+  "rootwebpageid": "4fff39b9-0923-f111-8341-000d3ab2bd64",
+  "copy": "{% fetchxml tickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;attribute name=\"createdby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_ticketcreatedby\" operator=\"eq\" value=\"{{user.id}}\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %} {% fetchxml resolvedtickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_requeststatus\" operator=\"eq\" value=\"1\" /&gt;\n      &lt;condition attribute=\"it_ticketcreatedby\" operator=\"eq\" value=\"{{user.id}}\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %} {% fetchxml inprogresstickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_requeststatus\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_ticketcreatedby\" operator=\"eq\" value=\"{{user.id}}\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %} {% fetchxml onholdtickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_requeststatus\" operator=\"eq\" value=\"3\" /&gt;\n      &lt;condition attribute=\"it_ticketcreatedby\" operator=\"eq\" value=\"{{user.id}}\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %}\n\n&lt;div class=\"hero hero--employee\" style=\"padding:16px 16px 14px\"&gt;\n  &lt;p class=\"hero-eyebrow hero-eyebrow--employee\"&gt;My requests&lt;/p&gt;\n  &lt;h1&gt;My tickets&lt;/h1&gt;\n&lt;/div&gt;\n\n&lt;div class=\"page-wrapper\" id=\"pageWrapper\"&gt;\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"metric-grid\"&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Total tickets&lt;/p&gt;\n        &lt;p class=\"metric-value\"&gt;{{ tickets.results.entities.size }}&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;On Hold&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--warn\"&gt;{{ onholdtickets.results.entities.size }}&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;In progress&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--blue\"&gt;{{ inprogresstickets.results.entities.size }}&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Resolved&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--success\"&gt;{{ resolvedtickets.results.entities.size }}&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"filter-bar\"&gt;\n      &lt;input type=\"text\" id=\"searchbox\" placeholder=\"Search my tickets...\" /&gt;\n      &lt;select&gt;\n        &lt;option&gt;All statuses&lt;/option&gt;\n        &lt;option&gt;New&lt;/option&gt;\n        &lt;option&gt;In progress&lt;/option&gt;\n        &lt;option&gt;On hold&lt;/option&gt;\n        &lt;option&gt;Resolved&lt;/option&gt;\n      &lt;/select&gt;\n      &lt;select&gt;\n        &lt;option&gt;All categories&lt;/option&gt;\n        &lt;option&gt;Hardware&lt;/option&gt;\n        &lt;option&gt;Software&lt;/option&gt;\n        &lt;option&gt;Network&lt;/option&gt;\n        &lt;option&gt;Access&lt;/option&gt;\n      &lt;/select&gt;\n      &lt;button class=\"btn-new\"&gt;+ New ticket&lt;/button&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"table-card\"&gt;\n      &lt;div class=\"table-wrap\"&gt;\n        &lt;table&gt;\n          &lt;colgroup&gt;\n            &lt;col style=\"width:80px\" /&gt;\n            &lt;col style=\"width:200px\" /&gt;\n            &lt;col style=\"width:75px\" /&gt;\n            &lt;col style=\"width:70px\" /&gt;\n            &lt;col style=\"width:85px\" /&gt;\n            &lt;col style=\"width:100px\" /&gt;\n            &lt;col style=\"width:55px\" /&gt;\n          &lt;/colgroup&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Ticket ID&lt;/th&gt;\n              &lt;th&gt;Title&lt;/th&gt;\n              &lt;th&gt;Category&lt;/th&gt;\n              &lt;th&gt;Priority&lt;/th&gt;\n              &lt;th&gt;Status&lt;/th&gt;\n              &lt;th&gt;Date&lt;/th&gt;\n              &lt;th&gt;&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody id=\"ticketBody\"&gt;&lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n\n      &lt;!-- ── Pagination Footer ── --&gt;\n      &lt;div class=\"table-footer\"&gt;\n        &lt;span class=\"pagination-info\" id=\"paginationInfo\"&gt;&lt;/span&gt;\n        &lt;nav class=\"pagination\" id=\"pagination\" aria-label=\"Ticket pages\"&gt;&lt;/nav&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n\n&lt;script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"&gt;&lt;/script&gt;\n&lt;script&gt;\n  $(document).ready(function () {\n\n    var tickets = [];\n    var filteredTickets = [];\n\n    {%if tickets.results.entities | size &gt; 0 %}\n    console.log('size: ', `{{ tickets.results.entities.size }}`)\n    {% for ticket in tickets.results.entities %}\n\n    tickets.push({\n      \"id\": `{{ticket.it_newcolumn}}`,\n      \"title\": `{{ticket.it_tickettitle}}`,\n      \"category\": `{{ticket.it_category.label}}`,\n      \"priority\": `{{ticket.it_priority.label}}`,\n      \"status\": `{{ticket.it_requeststatus.label}}`,\n      \"effectivedate\": `{{ticket.it_startdate | date: \"%d/%M/%y\" }}`,\n      \"reqguid\": `{{ticket.it_requestid}}`\n    })\n\n    {% endfor %}\n    {% endif %}\n    console.log('tickets : ', tickets)\n\n    var PER_PAGE = 3;   /* rows per page — adjust as needed */\n    var cur = 1;\n    var totalPg = Math.ceil(tickets.length / PER_PAGE);\n\n    /* ── Sliding window: always exactly 3 page numbers ── */\n    function getWindow() {\n      var s = cur - 1;\n      if (s &lt; 1) s = 1;\n      if (s + 2 &gt; totalPg) s = Math.max(1, totalPg - 2);\n      var win = [];\n      for (var p = s; p &lt;= s + 2 &amp;&amp; p &lt;= totalPg; p++) win.push(p);\n      console.log('win', win)\n      return win;\n    }\n\n    function renderTable(tickets) {\n      var priorityLabel, statusLabel;\n      var start = (cur - 1) * PER_PAGE;\n      var rows = tickets.slice(start, start + PER_PAGE);\n      var html = '';\n      for (var i = 0; i &lt; rows.length; i++) {\n        var t = rows[i];\n        if (t.priority == \"Low\") {\n          priorityLabel = \"low\"\n        }\n        else if (t.priority == \"Medium\") {\n          priorityLabel = \"med\"\n        }\n        else if (t.priority == \"High\") {\n          priorityLabel = \"high\"\n        }\n        else if (t.priority == \"Critical\") {\n          priorityLabel = \"crit\"\n        };\n\n        if (t.status == \"Resolved\") {\n          statusLabel = \"done\"\n        }\n        else if (t.status == \"In Progresss\" || t.status == \"New\") {\n          statusLabel = \"prog\"\n        }\n\n        html += '&lt;tr&gt;' +\n          '&lt;td&gt;' + t.id + '&lt;/td&gt;' +\n          '&lt;td&gt;' + t.title + '&lt;/td&gt;' +\n          '&lt;td&gt;' + t.category + '&lt;/td&gt;' +\n          '&lt;td&gt;&lt;span class=\"badge badge--' + priorityLabel + '\"&gt;' + t.priority + '&lt;/span&gt;&lt;/td&gt;' +\n          '&lt;td&gt;&lt;span class=\"badge badge--' + statusLabel + '\"&gt;' + t.status + '&lt;/span&gt;&lt;/td&gt;' +\n          '&lt;td&gt;' + t.effectivedate + '&lt;/td&gt;' +\n          '&lt;td&gt;&lt;a href=\"/ticketdetail/?id='+ t.reqguid +'\" class=\"tbl-btn tbl-btn--view\"&gt;View \\u2192&lt;/a&gt;&lt;/td&gt;' +\n          '&lt;/tr&gt;';\n      }\n      document.getElementById('ticketBody').innerHTML = html;\n      var end = Math.min(start + PER_PAGE, tickets.length);\n      document.getElementById('paginationInfo').textContent =\n        'Showing ' + (start + 1) + '\\u2013' + end + ' of ' + tickets.length + ' tickets';\n    }\n\n    function renderPagination() {\n      var win = getWindow();\n      var html = '';\n\n      /* Prev button */\n      html += '&lt;button id=\"prevBtn\" class=\"page-btn page-btn--nav\"' +\n        (cur === 1 ? ' disabled' : '') + ' aria-label=\"Previous page\"&gt;' +\n        '&lt;svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"' +\n        ' stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;polyline points=\"10,3 6,8 10,13\"/&gt;&lt;/svg&gt;' +\n        '&lt;/button&gt;';\n\n      /* 3 page number buttons */\n      for (var i = 0; i &lt; win.length; i++) {\n        var p = win[i];\n        html += `&lt;button id=\"pageBtn_${i + 1}\" class=\"page-btn${p === cur ? ' active' : ''}\"${p === cur ? ' aria-current=\"page\"' : ''}&gt;${p}&lt;/button&gt;`;\n      }\n\n      /* Next button */\n      html += '&lt;button id=\"nextBtn\" class=\"page-btn page-btn--nav\"' +\n        (cur === totalPg ? ' disabled' : '') + ' aria-label=\"Next page\"&gt;' +\n        '&lt;svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"' +\n        ' stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;polyline points=\"6,3 10,8 6,13\"/&gt;&lt;/svg&gt;' +\n        '&lt;/button&gt;';\n\n      document.getElementById('pagination').innerHTML = html;\n    }\n\n    function go(p) {\n      if (p &lt; 1 || p &gt; totalPg) return;\n      cur = p;\n\n      const value = document.getElementById(\"searchbox\").value.trim().toLowerCase();\n      if (value === \"\") {\n        renderTable(tickets);\n      }\n      else {\n        renderTable(filteredTickets);\n      }\n\n      renderPagination();\n    }\n\n    /* ── Init ── */\n    renderTable(tickets);\n    renderPagination();\n\n\n    document.getElementById(\"pagination\").addEventListener(\"click\", function (e) {\n\n      const btn = e.target.closest(\"button\");\n      if (!btn) return;\n\n      if (btn.id === \"prevBtn\" &amp;&amp; cur &gt; 1) {\n        go(cur - 1);\n      }\n\n      else if (btn.id === \"nextBtn\" &amp;&amp; cur &lt; totalPg) {\n        go(cur + 1);\n      }\n\n      else if (btn.id.startsWith(\"pageBtn_\")) {\n        const page = parseInt(btn.id.split(\"_\")[1]);\n        console.log('page:', page)\n        go(page);\n      }\n\n    });\n\n    document.getElementById(\"searchbox\").addEventListener(\"change\", function () {\n      const value = this.value.trim().toLowerCase();\n\n      if (value === \"\") {\n        filteredTickets = tickets; // reset\n      } else {\n        filteredTickets = tickets.filter(t =&gt;\n          (t.title || \"\").toLowerCase().includes(value) ||\n          (t.category || \"\").toLowerCase().includes(value) ||\n          (t.priority || \"\").toLowerCase().includes(value) ||\n          (t.status || \"\").toLowerCase().includes(value) ||\n          (t.id || \"\").toLowerCase().includes(value)\n        );\n      }\n\n      cur = 1;\n      totalPg = Math.ceil(filteredTickets.length / PER_PAGE);\n      console.log('filtered', filteredTickets)\n\n      renderTable(filteredTickets);\n      renderPagination();\n    });\n\n  })\n&lt;/script&gt;\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>MyTickets</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>{% fetchxml tickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;attribute name="createdby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_ticketcreatedby" operator="eq" value="{{user.id}}" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %} {% fetchxml resolvedtickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_requeststatus" operator="eq" value="1" /&gt;
+      &lt;condition attribute="it_ticketcreatedby" operator="eq" value="{{user.id}}" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %} {% fetchxml inprogresstickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_requeststatus" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_ticketcreatedby" operator="eq" value="{{user.id}}" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %} {% fetchxml onholdtickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_requeststatus" operator="eq" value="3" /&gt;
+      &lt;condition attribute="it_ticketcreatedby" operator="eq" value="{{user.id}}" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %}
+
+&lt;div class="hero hero--employee" style="padding:16px 16px 14px"&gt;
+  &lt;p class="hero-eyebrow hero-eyebrow--employee"&gt;My requests&lt;/p&gt;
+  &lt;h1&gt;My tickets&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="page-wrapper" id="pageWrapper"&gt;
+  &lt;main class="main"&gt;
+    &lt;div class="metric-grid"&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Total tickets&lt;/p&gt;
+        &lt;p class="metric-value"&gt;{{ tickets.results.entities.size }}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;On Hold&lt;/p&gt;
+        &lt;p class="metric-value metric-value--warn"&gt;{{ onholdtickets.results.entities.size }}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;In progress&lt;/p&gt;
+        &lt;p class="metric-value metric-value--blue"&gt;{{ inprogresstickets.results.entities.size }}&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Resolved&lt;/p&gt;
+        &lt;p class="metric-value metric-value--success"&gt;{{ resolvedtickets.results.entities.size }}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="filter-bar"&gt;
+      &lt;input type="text" id="searchbox" placeholder="Search my tickets..." /&gt;
+      &lt;select&gt;
+        &lt;option&gt;All statuses&lt;/option&gt;
+        &lt;option&gt;New&lt;/option&gt;
+        &lt;option&gt;In progress&lt;/option&gt;
+        &lt;option&gt;On hold&lt;/option&gt;
+        &lt;option&gt;Resolved&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select&gt;
+        &lt;option&gt;All categories&lt;/option&gt;
+        &lt;option&gt;Hardware&lt;/option&gt;
+        &lt;option&gt;Software&lt;/option&gt;
+        &lt;option&gt;Network&lt;/option&gt;
+        &lt;option&gt;Access&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button class="btn-new"&gt;+ New ticket&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class="table-card"&gt;
+      &lt;div class="table-wrap"&gt;
+        &lt;table&gt;
+          &lt;colgroup&gt;
+            &lt;col style="width:80px" /&gt;
+            &lt;col style="width:200px" /&gt;
+            &lt;col style="width:75px" /&gt;
+            &lt;col style="width:70px" /&gt;
+            &lt;col style="width:85px" /&gt;
+            &lt;col style="width:100px" /&gt;
+            &lt;col style="width:55px" /&gt;
+          &lt;/colgroup&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Ticket ID&lt;/th&gt;
+              &lt;th&gt;Title&lt;/th&gt;
+              &lt;th&gt;Category&lt;/th&gt;
+              &lt;th&gt;Priority&lt;/th&gt;
+              &lt;th&gt;Status&lt;/th&gt;
+              &lt;th&gt;Date&lt;/th&gt;
+              &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody id="ticketBody"&gt;&lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;!-- ── Pagination Footer ── --&gt;
+      &lt;div class="table-footer"&gt;
+        &lt;span class="pagination-info" id="paginationInfo"&gt;&lt;/span&gt;
+        &lt;nav class="pagination" id="pagination" aria-label="Ticket pages"&gt;&lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+
+    var tickets = [];
+    var filteredTickets = [];
+
+    {%if tickets.results.entities | size &gt; 0 %}
+    console.log('size: ', `{{ tickets.results.entities.size }}`)
+    {% for ticket in tickets.results.entities %}
+
+    tickets.push({
+      "id": `{{ticket.it_newcolumn}}`,
+      "title": `{{ticket.it_tickettitle}}`,
+      "category": `{{ticket.it_category.label}}`,
+      "priority": `{{ticket.it_priority.label}}`,
+      "status": `{{ticket.it_requeststatus.label}}`,
+      "effectivedate": `{{ticket.it_startdate | date: "%d/%M/%y" }}`,
+      "reqguid": `{{ticket.it_requestid}}`
+    })
+
+    {% endfor %}
+    {% endif %}
+    console.log('tickets : ', tickets)
+
+    var PER_PAGE = 3;   /* rows per page — adjust as needed */
+    var cur = 1;
+    var totalPg = Math.ceil(tickets.length / PER_PAGE);
+
+    /* ── Sliding window: always exactly 3 page numbers ── */
+    function getWindow() {
+      var s = cur - 1;
+      if (s &lt; 1) s = 1;
+      if (s + 2 &gt; totalPg) s = Math.max(1, totalPg - 2);
+      var win = [];
+      for (var p = s; p &lt;= s + 2 &amp;&amp; p &lt;= totalPg; p++) win.push(p);
+      console.log('win', win)
+      return win;
+    }
+
+    function renderTable(tickets) {
+      var priorityLabel, statusLabel;
+      var start = (cur - 1) * PER_PAGE;
+      var rows = tickets.slice(start, start + PER_PAGE);
+      var html = '';
+      for (var i = 0; i &lt; rows.length; i++) {
+        var t = rows[i];
+        if (t.priority == "Low") {
+          priorityLabel = "low"
+        }
+        else if (t.priority == "Medium") {
+          priorityLabel = "med"
+        }
+        else if (t.priority == "High") {
+          priorityLabel = "high"
+        }
+        else if (t.priority == "Critical") {
+          priorityLabel = "crit"
+        };
+
+        if (t.status == "Resolved") {
+          statusLabel = "done"
+        }
+        else if (t.status == "In Progresss" || t.status == "New") {
+          statusLabel = "prog"
+        }
+
+        html += '&lt;tr&gt;' +
+          '&lt;td&gt;' + t.id + '&lt;/td&gt;' +
+          '&lt;td&gt;' + t.title + '&lt;/td&gt;' +
+          '&lt;td&gt;' + t.category + '&lt;/td&gt;' +
+          '&lt;td&gt;&lt;span class="badge badge--' + priorityLabel + '"&gt;' + t.priority + '&lt;/span&gt;&lt;/td&gt;' +
+          '&lt;td&gt;&lt;span class="badge badge--' + statusLabel + '"&gt;' + t.status + '&lt;/span&gt;&lt;/td&gt;' +
+          '&lt;td&gt;' + t.effectivedate + '&lt;/td&gt;' +
+          '&lt;td&gt;&lt;a href="/ticketdetail/?id='+ t.reqguid +'" class="tbl-btn tbl-btn--view"&gt;View \u2192&lt;/a&gt;&lt;/td&gt;' +
+          '&lt;/tr&gt;';
+      }
+      document.getElementById('ticketBody').innerHTML = html;
+      var end = Math.min(start + PER_PAGE, tickets.length);
+      document.getElementById('paginationInfo').textContent =
+        'Showing ' + (start + 1) + '\u2013' + end + ' of ' + tickets.length + ' tickets';
+    }
+
+    function renderPagination() {
+      var win = getWindow();
+      var html = '';
+
+      /* Prev button */
+      html += '&lt;button id="prevBtn" class="page-btn page-btn--nav"' +
+        (cur === 1 ? ' disabled' : '') + ' aria-label="Previous page"&gt;' +
+        '&lt;svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"' +
+        ' stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="10,3 6,8 10,13"/&gt;&lt;/svg&gt;' +
+        '&lt;/button&gt;';
+
+      /* 3 page number buttons */
+      for (var i = 0; i &lt; win.length; i++) {
+        var p = win[i];
+        html += `&lt;button id="pageBtn_${i + 1}" class="page-btn${p === cur ? ' active' : ''}"${p === cur ? ' aria-current="page"' : ''}&gt;${p}&lt;/button&gt;`;
+      }
+
+      /* Next button */
+      html += '&lt;button id="nextBtn" class="page-btn page-btn--nav"' +
+        (cur === totalPg ? ' disabled' : '') + ' aria-label="Next page"&gt;' +
+        '&lt;svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"' +
+        ' stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6,3 10,8 6,13"/&gt;&lt;/svg&gt;' +
+        '&lt;/button&gt;';
+
+      document.getElementById('pagination').innerHTML = html;
+    }
+
+    function go(p) {
+      if (p &lt; 1 || p &gt; totalPg) return;
+      cur = p;
+
+      const value = document.getElementById("searchbox").value.trim().toLowerCase();
+      if (value === "") {
+        renderTable(tickets);
+      }
+      else {
+        renderTable(filteredTickets);
+      }
+
+      renderPagination();
+    }
+
+    /* ── Init ── */
+    renderTable(tickets);
+    renderPagination();
+
+
+    document.getElementById("pagination").addEventListener("click", function (e) {
+
+      const btn = e.target.closest("button");
+      if (!btn) return;
+
+      if (btn.id === "prevBtn" &amp;&amp; cur &gt; 1) {
+        go(cur - 1);
+      }
+
+      else if (btn.id === "nextBtn" &amp;&amp; cur &lt; totalPg) {
+        go(cur + 1);
+      }
+
+      else if (btn.id.startsWith("pageBtn_")) {
+        const page = parseInt(btn.id.split("_")[1]);
+        console.log('page:', page)
+        go(page);
+      }
+
+    });
+
+    document.getElementById("searchbox").addEventListener("change", function () {
+      const value = this.value.trim().toLowerCase();
+
+      if (value === "") {
+        filteredTickets = tickets; // reset
+      } else {
+        filteredTickets = tickets.filter(t =&gt;
+          (t.title || "").toLowerCase().includes(value) ||
+          (t.category || "").toLowerCase().includes(value) ||
+          (t.priority || "").toLowerCase().includes(value) ||
+          (t.status || "").toLowerCase().includes(value) ||
+          (t.id || "").toLowerCase().includes(value)
+        );
+      }
+
+      cur = 1;
+      totalPg = Math.ceil(filteredTickets.length / PER_PAGE);
+      console.log('filtered', filteredTickets)
+
+      renderTable(filteredTickets);
+      renderPagination();
+    });
+
+  })
+&lt;/script&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;MyTickets</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,11 @@
+<powerpagesites>
+  <powerpagesite powerpagesiteid="9b83af8c-d72e-46af-b1cc-a9a8d1cf9661">
+    <content>{"defaultlanguage":"124caa50-13bc-4942-9797-a04be225e576","footerwebtemplateid":"1be4a7c2-eb31-4eda-97f8-c978715f7d67","headerwebtemplateid":"c7434fa7-463d-4207-a353-a2f6f93fa64b","website_language":1033,"defaultbotconsumerid":"9d69d15d-aa22-f111-8342-000d3ab2c460"}</content>
+    <datamodelversion>2.0</datamodelversion>
+    <iscustomizable>1</iscustomizable>
+    <name>ITSupportPortal - itsupportportal-dev</name>
+    <primarydomainname>itsupportportal-dev.powerappsportals.com</primarydomainname>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </powerpagesite>
+</powerpagesites>

@@ -1,0 +1,24 @@
+<powerpagecomponent powerpagecomponentid="88669a26-9827-f111-8341-7ced8d40bd82">
+  <content>{
+   "scope": 756150000,
+   "entitylogicalname": "it_request",
+   "entityname": "RequestPermission - Employee",
+   "appendto": false,
+   "append": false,
+   "delete": false,
+   "create": true,
+   "write": true,
+   "read": true,
+   "adx_entitypermission_webrole": [
+      "4c90d262-192c-f111-88b4-000d3ab2c460"
+   ]
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>RequestPermission - Employee</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,24 @@
+<powerpagecomponent powerpagecomponentid="df13ef7a-1a2c-f111-88b4-000d3ab2c460">
+  <content>{
+   "scope": 756150000,
+   "entitylogicalname": "it_request",
+   "entityname": "RequestPermission - Manager",
+   "appendto": false,
+   "append": false,
+   "delete": true,
+   "create": true,
+   "write": true,
+   "read": true,
+   "adx_entitypermission_webrole": [
+      "72b8f16d-192c-f111-88b4-000d3ab2c460"
+   ]
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>RequestPermission - Manager</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

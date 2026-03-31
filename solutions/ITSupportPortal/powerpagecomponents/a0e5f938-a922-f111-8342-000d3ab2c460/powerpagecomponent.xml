@@ -1,0 +1,16 @@
+<powerpagecomponent powerpagecomponentid="a0e5f938-a922-f111-8342-000d3ab2c460">
+  <content>{
+  "isdefault": false,
+  "usewebsiteheaderandfooter": true,
+  "type": 756150001,
+  "webtemplateid": "7f704a17-a922-f111-8342-000d3ab2c460"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>IT Support Portal Template</name>
+  <powerpagecomponenttype>6</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

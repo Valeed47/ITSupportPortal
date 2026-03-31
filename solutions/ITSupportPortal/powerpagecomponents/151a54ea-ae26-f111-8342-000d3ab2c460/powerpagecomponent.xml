@@ -1,0 +1,489 @@
+<powerpagecomponent powerpagecomponentid="151a54ea-ae26-f111-8342-000d3ab2c460">
+  <content>{
+  "filecontent": null,
+  "partialurl": "manager-dashboard",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": false,
+  "sharedpageconfiguration": true,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "isofflinecached": false,
+  "rootwebpageid": "141a54ea-ae26-f111-8342-000d3ab2c460",
+  "copy": "{% fetchxml alltickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;attribute name=\"createdby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %} {% fetchxml resolvedtickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_requeststatus\" operator=\"eq\" value=\"1\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %} {% fetchxml inprogresstickets %}\n&lt;fetch&gt;\n  &lt;entity name=\"it_request\"&gt;\n    &lt;attribute name=\"it_requestid\" /&gt;\n    &lt;attribute name=\"it_affecteddevice\" /&gt;\n    &lt;attribute name=\"it_category\" /&gt;\n    &lt;attribute name=\"it_categoryname\" /&gt;\n    &lt;attribute name=\"it_priority\" /&gt;\n    &lt;attribute name=\"it_priorityname\" /&gt;\n    &lt;attribute name=\"it_requeststatus\" /&gt;\n    &lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"it_startdate\" /&gt;\n    &lt;attribute name=\"it_newcolumn\" /&gt;\n    &lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_ticketcreatedby\" /&gt;\n    &lt;filter type=\"and\"&gt;\n      &lt;condition attribute=\"statecode\" operator=\"eq\" value=\"0\" /&gt;\n      &lt;condition attribute=\"it_requeststatus\" operator=\"eq\" value=\"0\" /&gt;\n    &lt;/filter&gt;\n  &lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %}\n\n&lt;div class=\"hero hero--manager\" style=\"padding:16px 16px 14px\"&gt;\n  &lt;p class=\"hero-eyebrow hero-eyebrow--manager\"&gt;IT Manager view&lt;/p&gt;\n  &lt;h1&gt;Manager dashboard&lt;/h1&gt;\n&lt;/div&gt;\n\n&lt;div class=\"page-wrapper\" id=\"pageWrapper\"&gt;\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"metric-grid\"&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Total this month&lt;/p&gt;\n        &lt;p class=\"metric-value\"&gt;{{ alltickets.results.entities.size }}&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;+12 vs last month&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;In Progress tickets&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--warn\"&gt;{{ inprogresstickets.results.entities.size }}&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;7 unassigned&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Resolved today&lt;/p&gt;\n        &lt;p class=\"metric-value metric-value--success\"&gt;{{ resolvedtickets.results.entities.size }}&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;Avg. 3.2h resolution&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"metric-card\"&gt;\n        &lt;p class=\"metric-label\"&gt;Satisfaction score&lt;/p&gt;\n        &lt;p class=\"metric-value\"&gt;4.8&lt;/p&gt;\n        &lt;p class=\"metric-sub\"&gt;Out of 5.0&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"two-col\"&gt;\n      &lt;div class=\"card\" style=\"margin-bottom:14px\"&gt;\n        &lt;div class=\"card-head\"&gt;\n          &lt;h3&gt;Agent workload&lt;/h3&gt;\n          &lt;a href=\"#\" class=\"card-link\" style=\"color:#7c3aed\"&gt;Manage →&lt;/a&gt;\n        &lt;/div&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Agent&lt;/th&gt;\n              &lt;th style=\"text-align:center\"&gt;Open&lt;/th&gt;\n              &lt;th style=\"text-align:center\"&gt;Resolved&lt;/th&gt;\n              &lt;th style=\"width:110px\"&gt;Load&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Mark Davis&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;&lt;span class=\"badge badge--med\"&gt;5&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;34&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;\n                    &lt;div class=\"bar-fill bar-fill--medium\" style=\"width:55%\"&gt;&lt;/div&gt;\n                  &lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;55%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Sarah Wong&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;&lt;span class=\"badge badge--high\"&gt;8&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;28&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;\n                    &lt;div class=\"bar-fill bar-fill--high\" style=\"width:80%\"&gt;&lt;/div&gt;\n                  &lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;80%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Ali Hassan&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;&lt;span class=\"badge badge--done\"&gt;3&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;41&lt;/td&gt;\n              &lt;td&gt;\n                &lt;div class=\"bar-wrap\"&gt;\n                  &lt;div class=\"bar-bg\"&gt;\n                    &lt;div class=\"bar-fill bar-fill--low\" style=\"width:30%\"&gt;&lt;/div&gt;\n                  &lt;/div&gt;\n                  &lt;span class=\"bar-pct\"&gt;30%&lt;/span&gt;\n                &lt;/div&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr style=\"border-top:0.5px solid #e5e7eb\"&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;&lt;span class=\"badge badge--crit\"&gt;7&lt;/span&gt;&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;—&lt;/td&gt;\n              &lt;td style=\"font-size:10px;color:#dc2626\"&gt;Action needed&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n\n      &lt;div class=\"card\" style=\"margin-bottom:14px\"&gt;\n        &lt;div class=\"card-head\"&gt;\n          &lt;h3&gt;Tickets by category&lt;/h3&gt;\n        &lt;/div&gt;\n        &lt;table&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Category&lt;/th&gt;\n              &lt;th style=\"text-align:center\"&gt;Open&lt;/th&gt;\n              &lt;th style=\"text-align:center\"&gt;Total&lt;/th&gt;\n              &lt;th&gt;Avg time&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Software&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;9&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;52&lt;/td&gt;\n              &lt;td&gt;2.4h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Hardware&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;6&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;38&lt;/td&gt;\n              &lt;td&gt;4.1h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Access&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;5&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;31&lt;/td&gt;\n              &lt;td&gt;1.8h&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;Network&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;3&lt;/td&gt;\n              &lt;td style=\"text-align:center\"&gt;21&lt;/td&gt;\n              &lt;td&gt;3.6h&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"table-card\"&gt;\n      &lt;div class=\"table-card-head\"&gt;\n        &lt;h3&gt;Full ticket queue&lt;/h3&gt;\n        &lt;a href=\"#\" class=\"card-link\" style=\"color:#7c3aed\"&gt;Export CSV →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"table-wrap\"&gt;\n        &lt;table&gt;\n          &lt;colgroup&gt;\n            &lt;col style=\"width:70px\" /&gt;\n            &lt;col style=\"width:180px\" /&gt;\n            &lt;col style=\"width:70px\" /&gt;\n            &lt;col style=\"width:65px\" /&gt;\n            &lt;col style=\"width:75px\" /&gt;\n            &lt;col style=\"width:85px\" /&gt;\n            &lt;col style=\"width:55px\" /&gt;\n          &lt;/colgroup&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;ID&lt;/th&gt;\n              &lt;th&gt;Title&lt;/th&gt;\n              &lt;th&gt;Employee&lt;/th&gt;\n              &lt;th&gt;Priority&lt;/th&gt;\n              &lt;th&gt;Status&lt;/th&gt;\n              &lt;th&gt;Agent&lt;/th&gt;\n              &lt;th&gt;&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody id=\"tbody\"&gt;\n            &lt;!-- &lt;tr&gt;\n              &lt;td&gt;TKT-0042&lt;/td&gt;\n              &lt;td&gt;Email password expired&lt;/td&gt;\n              &lt;td&gt;S. Patel&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--crit\"&gt;Critical&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0041&lt;/td&gt;\n              &lt;td&gt;Laptop screen flickering&lt;/td&gt;\n              &lt;td&gt;J. Smith&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--med\"&gt;Medium&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--prog\"&gt;In progress&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;M. Davis&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0040&lt;/td&gt;\n              &lt;td&gt;Teams camera not working&lt;/td&gt;\n              &lt;td&gt;L. Chen&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--med\"&gt;Medium&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0039&lt;/td&gt;\n              &lt;td&gt;Cannot access Finance drive&lt;/td&gt;\n              &lt;td&gt;J. Smith&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--high\"&gt;High&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--new\"&gt;New&lt;/span&gt;&lt;/td&gt;\n              &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;td&gt;TKT-0038&lt;/td&gt;\n              &lt;td&gt;Printer offline on floor 2&lt;/td&gt;\n              &lt;td&gt;R. Ahmed&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--low\"&gt;Low&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;&lt;span class=\"badge badge--hold\"&gt;On hold&lt;/span&gt;&lt;/td&gt;\n              &lt;td&gt;M. Davis&lt;/td&gt;\n              &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n            &lt;/tr&gt; --&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n      &lt;div class=\"table-footer\"&gt;\n        &lt;span class=\"pagination-info\" id=\"paginationInfo\"&gt;&lt;/span&gt;\n        &lt;nav class=\"pagination\" id=\"pagination\" aria-label=\"Ticket pages\"&gt;&lt;/nav&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n&lt;script&gt;\n    var alltickets = [];\n  // var filteredTickets = [];\n\n   {%if alltickets.results.entities | size &gt; 0 %}\n   console.log('size: ', `{{ alltickets.results.entities.size }}`)\n   {% for ticket in alltickets.results.entities %}\n\n   alltickets.push({\n     \"id\": `{{ticket.it_newcolumn}}`,\n     \"title\": `{{ticket.it_tickettitle}}`,\n     \"category\": `{{ticket.it_category.label}}`,\n     \"priority\": `{{ticket.it_priority.label}}`,\n     \"status\": `{{ticket.it_requeststatus.label}}`,\n     \"effectivedate\": `{{ticket.it_startdate | date: \"%d/%M/%y\" }}`,\n     \"reqguid\": `{{ticket.it_requestid}}`\n   })\n\n   {% endfor %}\n   {% endif %}\n   console.log('tickets : ', alltickets)\n\n   var PER_PAGE = 3;   /* rows per page — adjust as needed */\n   var cur = 1;\n   var totalPg = Math.ceil(alltickets.length / PER_PAGE);\n\n   /* ── Sliding window: always exactly 3 page numbers ── */\n   function getWindow() {\n     var s = cur - 1;\n     if (s &lt; 1) s = 1;\n     if (s + 2 &gt; totalPg) s = Math.max(1, totalPg - 2);\n     var win = [];\n     for (var p = s; p &lt;= s + 2 &amp;&amp; p &lt;= totalPg; p++) win.push(p);\n     console.log('win', win)\n     return win;\n   }\n\n   function renderTable(tickets) {\n     var priorityLabel, statusLabel;\n     var start = (cur - 1) * PER_PAGE;\n     var rows = tickets.slice(start, start + PER_PAGE);\n     var html = '';\n     for (var i = 0; i &lt; rows.length; i++) {\n       var t = rows[i];\n       if (t.priority == \"Low\") {\n         priorityLabel = \"low\"\n       }\n       else if (t.priority == \"Medium\") {\n         priorityLabel = \"med\"\n       }\n       else if (t.priority == \"High\") {\n         priorityLabel = \"high\"\n       }\n       else if (t.priority == \"Critical\") {\n         priorityLabel = \"crit\"\n       };\n\n       if (t.status == \"Resolved\") {\n         statusLabel = \"done\"\n       }\n       else if (t.status == \"In Progresss\" || t.status == \"New\") {\n         statusLabel = \"prog\"\n       }\n\n       html += `&lt;tr&gt;\n             &lt;td&gt;${t.id}&lt;/td&gt;\n             &lt;td&gt;${t.title}&lt;/td&gt;\n             &lt;td&gt;S. Patel&lt;/td&gt;\n             &lt;td&gt;&lt;span class=\"badge badge--${priorityLabel}\"&gt;${t.priority}&lt;/span&gt;&lt;/td&gt;\n             &lt;td&gt;&lt;span class=\"badge badge--${t.statusLabel}\"&gt;${t.status}&lt;/span&gt;&lt;/td&gt;\n             &lt;td class=\"unassigned-text\"&gt;Unassigned&lt;/td&gt;\n             &lt;td&gt;&lt;button class=\"tbl-btn tbl-btn--edit\" style=\"color:#7c3aed\"&gt;Edit →&lt;/button&gt;&lt;/td&gt;\n           &lt;/tr&gt;`\n     }\n     document.getElementById('tbody').innerHTML = html;\n     var end = Math.min(start + PER_PAGE, tickets.length);\n     document.getElementById('paginationInfo').textContent =\n       'Showing ' + (start + 1) + '\\u2013' + end + ' of ' + tickets.length + ' tickets';\n   }\n\n   function renderPagination() {\n     var win = getWindow();\n     var html = '';\n\n     /* Prev button */\n     html += '&lt;button id=\"prevBtn\" class=\"page-btn page-btn--nav\"' +\n       (cur === 1 ? ' disabled' : '') + ' aria-label=\"Previous page\"&gt;' +\n       '&lt;svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"' +\n       ' stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;polyline points=\"10,3 6,8 10,13\"/&gt;&lt;/svg&gt;' +\n       '&lt;/button&gt;';\n\n     /* 3 page number buttons */\n     for (var i = 0; i &lt; win.length; i++) {\n       var p = win[i];\n       html += `&lt;button id=\"pageBtn_${i + 1}\" class=\"page-btn${p === cur ? ' active' : ''}\"${p === cur ? ' aria-current=\"page\"' : ''}&gt;${p}&lt;/button&gt;`;\n     }\n\n     /* Next button */\n     html += '&lt;button id=\"nextBtn\" class=\"page-btn page-btn--nav\"' +\n       (cur === totalPg ? ' disabled' : '') + ' aria-label=\"Next page\"&gt;' +\n       '&lt;svg viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"' +\n       ' stroke-linecap=\"round\" stroke-linejoin=\"round\"&gt;&lt;polyline points=\"6,3 10,8 6,13\"/&gt;&lt;/svg&gt;' +\n       '&lt;/button&gt;';\n\n     document.getElementById('pagination').innerHTML = html;\n   }\n\n   function go(p) {\n     if (p &lt; 1 || p &gt; totalPg) return;\n     cur = p;\n\n     //const value = document.getElementById(\"searchbox\").value.trim().toLowerCase();\n\n       renderTable(alltickets);\n\n\n\n\n     renderPagination();\n   }\n\n   /* ── Init ── */\n   renderTable(alltickets);\n   renderPagination();\n\n\n   document.getElementById(\"pagination\").addEventListener(\"click\", function (e) {\n\n     const btn = e.target.closest(\"button\");\n     if (!btn) return;\n\n     if (btn.id === \"prevBtn\" &amp;&amp; cur &gt; 1) {\n       go(cur - 1);\n     }\n\n     else if (btn.id === \"nextBtn\" &amp;&amp; cur &lt; totalPg) {\n       go(cur + 1);\n     }\n\n     else if (btn.id.startsWith(\"pageBtn_\")) {\n       const page = parseInt(btn.id.split(\"_\")[1]);\n       console.log('page:', page)\n       go(page);\n     }\n\n   });\n\n   // document.getElementById(\"searchbox\").addEventListener(\"change\", function () {\n   //   const value = this.value.trim().toLowerCase();\n\n   //   if (value === \"\") {\n   //     filteredTickets = tickets; // reset\n   //   } else {\n   //     filteredTickets = tickets.filter(t =&gt;\n   //       (t.title || \"\").toLowerCase().includes(value) ||\n   //       (t.category || \"\").toLowerCase().includes(value) ||\n   //       (t.priority || \"\").toLowerCase().includes(value) ||\n   //       (t.status || \"\").toLowerCase().includes(value) ||\n   //       (t.id || \"\").toLowerCase().includes(value)\n   //     );\n   //   }\n\n   //   cur = 1;\n   //   totalPg = Math.ceil(filteredTickets.length / PER_PAGE);\n   //   console.log('filtered', filteredTickets)\n\n   //   renderTable(filteredTickets);\n   //   renderPagination();\n   // });\n&lt;/script&gt;\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>manager-dashboard</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>{% fetchxml alltickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;attribute name="createdby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %} {% fetchxml resolvedtickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_requeststatus" operator="eq" value="1" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %} {% fetchxml inprogresstickets %}
+&lt;fetch&gt;
+  &lt;entity name="it_request"&gt;
+    &lt;attribute name="it_requestid" /&gt;
+    &lt;attribute name="it_affecteddevice" /&gt;
+    &lt;attribute name="it_category" /&gt;
+    &lt;attribute name="it_categoryname" /&gt;
+    &lt;attribute name="it_priority" /&gt;
+    &lt;attribute name="it_priorityname" /&gt;
+    &lt;attribute name="it_requeststatus" /&gt;
+    &lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="it_startdate" /&gt;
+    &lt;attribute name="it_newcolumn" /&gt;
+    &lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_ticketcreatedby" /&gt;
+    &lt;filter type="and"&gt;
+      &lt;condition attribute="statecode" operator="eq" value="0" /&gt;
+      &lt;condition attribute="it_requeststatus" operator="eq" value="0" /&gt;
+    &lt;/filter&gt;
+  &lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %}
+
+&lt;div class="hero hero--manager" style="padding:16px 16px 14px"&gt;
+  &lt;p class="hero-eyebrow hero-eyebrow--manager"&gt;IT Manager view&lt;/p&gt;
+  &lt;h1&gt;Manager dashboard&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="page-wrapper" id="pageWrapper"&gt;
+  &lt;main class="main"&gt;
+    &lt;div class="metric-grid"&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Total this month&lt;/p&gt;
+        &lt;p class="metric-value"&gt;{{ alltickets.results.entities.size }}&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;+12 vs last month&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;In Progress tickets&lt;/p&gt;
+        &lt;p class="metric-value metric-value--warn"&gt;{{ inprogresstickets.results.entities.size }}&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;7 unassigned&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Resolved today&lt;/p&gt;
+        &lt;p class="metric-value metric-value--success"&gt;{{ resolvedtickets.results.entities.size }}&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;Avg. 3.2h resolution&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="metric-card"&gt;
+        &lt;p class="metric-label"&gt;Satisfaction score&lt;/p&gt;
+        &lt;p class="metric-value"&gt;4.8&lt;/p&gt;
+        &lt;p class="metric-sub"&gt;Out of 5.0&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="two-col"&gt;
+      &lt;div class="card" style="margin-bottom:14px"&gt;
+        &lt;div class="card-head"&gt;
+          &lt;h3&gt;Agent workload&lt;/h3&gt;
+          &lt;a href="#" class="card-link" style="color:#7c3aed"&gt;Manage →&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Agent&lt;/th&gt;
+              &lt;th style="text-align:center"&gt;Open&lt;/th&gt;
+              &lt;th style="text-align:center"&gt;Resolved&lt;/th&gt;
+              &lt;th style="width:110px"&gt;Load&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Mark Davis&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;&lt;span class="badge badge--med"&gt;5&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;34&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;
+                    &lt;div class="bar-fill bar-fill--medium" style="width:55%"&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;55%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Sarah Wong&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;&lt;span class="badge badge--high"&gt;8&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;28&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;
+                    &lt;div class="bar-fill bar-fill--high" style="width:80%"&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;80%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Ali Hassan&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;&lt;span class="badge badge--done"&gt;3&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;41&lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class="bar-wrap"&gt;
+                  &lt;div class="bar-bg"&gt;
+                    &lt;div class="bar-fill bar-fill--low" style="width:30%"&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;span class="bar-pct"&gt;30%&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr style="border-top:0.5px solid #e5e7eb"&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;&lt;span class="badge badge--crit"&gt;7&lt;/span&gt;&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;—&lt;/td&gt;
+              &lt;td style="font-size:10px;color:#dc2626"&gt;Action needed&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;div class="card" style="margin-bottom:14px"&gt;
+        &lt;div class="card-head"&gt;
+          &lt;h3&gt;Tickets by category&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Category&lt;/th&gt;
+              &lt;th style="text-align:center"&gt;Open&lt;/th&gt;
+              &lt;th style="text-align:center"&gt;Total&lt;/th&gt;
+              &lt;th&gt;Avg time&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Software&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;9&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;52&lt;/td&gt;
+              &lt;td&gt;2.4h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Hardware&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;6&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;38&lt;/td&gt;
+              &lt;td&gt;4.1h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Access&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;5&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;31&lt;/td&gt;
+              &lt;td&gt;1.8h&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Network&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;3&lt;/td&gt;
+              &lt;td style="text-align:center"&gt;21&lt;/td&gt;
+              &lt;td&gt;3.6h&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="table-card"&gt;
+      &lt;div class="table-card-head"&gt;
+        &lt;h3&gt;Full ticket queue&lt;/h3&gt;
+        &lt;a href="#" class="card-link" style="color:#7c3aed"&gt;Export CSV →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="table-wrap"&gt;
+        &lt;table&gt;
+          &lt;colgroup&gt;
+            &lt;col style="width:70px" /&gt;
+            &lt;col style="width:180px" /&gt;
+            &lt;col style="width:70px" /&gt;
+            &lt;col style="width:65px" /&gt;
+            &lt;col style="width:75px" /&gt;
+            &lt;col style="width:85px" /&gt;
+            &lt;col style="width:55px" /&gt;
+          &lt;/colgroup&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;ID&lt;/th&gt;
+              &lt;th&gt;Title&lt;/th&gt;
+              &lt;th&gt;Employee&lt;/th&gt;
+              &lt;th&gt;Priority&lt;/th&gt;
+              &lt;th&gt;Status&lt;/th&gt;
+              &lt;th&gt;Agent&lt;/th&gt;
+              &lt;th&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody id="tbody"&gt;
+            &lt;!-- &lt;tr&gt;
+              &lt;td&gt;TKT-0042&lt;/td&gt;
+              &lt;td&gt;Email password expired&lt;/td&gt;
+              &lt;td&gt;S. Patel&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--crit"&gt;Critical&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0041&lt;/td&gt;
+              &lt;td&gt;Laptop screen flickering&lt;/td&gt;
+              &lt;td&gt;J. Smith&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--med"&gt;Medium&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--prog"&gt;In progress&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;M. Davis&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0040&lt;/td&gt;
+              &lt;td&gt;Teams camera not working&lt;/td&gt;
+              &lt;td&gt;L. Chen&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--med"&gt;Medium&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0039&lt;/td&gt;
+              &lt;td&gt;Cannot access Finance drive&lt;/td&gt;
+              &lt;td&gt;J. Smith&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--high"&gt;High&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--new"&gt;New&lt;/span&gt;&lt;/td&gt;
+              &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TKT-0038&lt;/td&gt;
+              &lt;td&gt;Printer offline on floor 2&lt;/td&gt;
+              &lt;td&gt;R. Ahmed&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--low"&gt;Low&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class="badge badge--hold"&gt;On hold&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;M. Davis&lt;/td&gt;
+              &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+            &lt;/tr&gt; --&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+      &lt;div class="table-footer"&gt;
+        &lt;span class="pagination-info" id="paginationInfo"&gt;&lt;/span&gt;
+        &lt;nav class="pagination" id="pagination" aria-label="Ticket pages"&gt;&lt;/nav&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+&lt;script&gt;
+    var alltickets = [];
+  // var filteredTickets = [];
+
+   {%if alltickets.results.entities | size &gt; 0 %}
+   console.log('size: ', `{{ alltickets.results.entities.size }}`)
+   {% for ticket in alltickets.results.entities %}
+
+   alltickets.push({
+     "id": `{{ticket.it_newcolumn}}`,
+     "title": `{{ticket.it_tickettitle}}`,
+     "category": `{{ticket.it_category.label}}`,
+     "priority": `{{ticket.it_priority.label}}`,
+     "status": `{{ticket.it_requeststatus.label}}`,
+     "effectivedate": `{{ticket.it_startdate | date: "%d/%M/%y" }}`,
+     "reqguid": `{{ticket.it_requestid}}`
+   })
+
+   {% endfor %}
+   {% endif %}
+   console.log('tickets : ', alltickets)
+
+   var PER_PAGE = 3;   /* rows per page — adjust as needed */
+   var cur = 1;
+   var totalPg = Math.ceil(alltickets.length / PER_PAGE);
+
+   /* ── Sliding window: always exactly 3 page numbers ── */
+   function getWindow() {
+     var s = cur - 1;
+     if (s &lt; 1) s = 1;
+     if (s + 2 &gt; totalPg) s = Math.max(1, totalPg - 2);
+     var win = [];
+     for (var p = s; p &lt;= s + 2 &amp;&amp; p &lt;= totalPg; p++) win.push(p);
+     console.log('win', win)
+     return win;
+   }
+
+   function renderTable(tickets) {
+     var priorityLabel, statusLabel;
+     var start = (cur - 1) * PER_PAGE;
+     var rows = tickets.slice(start, start + PER_PAGE);
+     var html = '';
+     for (var i = 0; i &lt; rows.length; i++) {
+       var t = rows[i];
+       if (t.priority == "Low") {
+         priorityLabel = "low"
+       }
+       else if (t.priority == "Medium") {
+         priorityLabel = "med"
+       }
+       else if (t.priority == "High") {
+         priorityLabel = "high"
+       }
+       else if (t.priority == "Critical") {
+         priorityLabel = "crit"
+       };
+
+       if (t.status == "Resolved") {
+         statusLabel = "done"
+       }
+       else if (t.status == "In Progresss" || t.status == "New") {
+         statusLabel = "prog"
+       }
+
+       html += `&lt;tr&gt;
+             &lt;td&gt;${t.id}&lt;/td&gt;
+             &lt;td&gt;${t.title}&lt;/td&gt;
+             &lt;td&gt;S. Patel&lt;/td&gt;
+             &lt;td&gt;&lt;span class="badge badge--${priorityLabel}"&gt;${t.priority}&lt;/span&gt;&lt;/td&gt;
+             &lt;td&gt;&lt;span class="badge badge--${t.statusLabel}"&gt;${t.status}&lt;/span&gt;&lt;/td&gt;
+             &lt;td class="unassigned-text"&gt;Unassigned&lt;/td&gt;
+             &lt;td&gt;&lt;button class="tbl-btn tbl-btn--edit" style="color:#7c3aed"&gt;Edit →&lt;/button&gt;&lt;/td&gt;
+           &lt;/tr&gt;`
+     }
+     document.getElementById('tbody').innerHTML = html;
+     var end = Math.min(start + PER_PAGE, tickets.length);
+     document.getElementById('paginationInfo').textContent =
+       'Showing ' + (start + 1) + '\u2013' + end + ' of ' + tickets.length + ' tickets';
+   }
+
+   function renderPagination() {
+     var win = getWindow();
+     var html = '';
+
+     /* Prev button */
+     html += '&lt;button id="prevBtn" class="page-btn page-btn--nav"' +
+       (cur === 1 ? ' disabled' : '') + ' aria-label="Previous page"&gt;' +
+       '&lt;svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"' +
+       ' stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="10,3 6,8 10,13"/&gt;&lt;/svg&gt;' +
+       '&lt;/button&gt;';
+
+     /* 3 page number buttons */
+     for (var i = 0; i &lt; win.length; i++) {
+       var p = win[i];
+       html += `&lt;button id="pageBtn_${i + 1}" class="page-btn${p === cur ? ' active' : ''}"${p === cur ? ' aria-current="page"' : ''}&gt;${p}&lt;/button&gt;`;
+     }
+
+     /* Next button */
+     html += '&lt;button id="nextBtn" class="page-btn page-btn--nav"' +
+       (cur === totalPg ? ' disabled' : '') + ' aria-label="Next page"&gt;' +
+       '&lt;svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"' +
+       ' stroke-linecap="round" stroke-linejoin="round"&gt;&lt;polyline points="6,3 10,8 6,13"/&gt;&lt;/svg&gt;' +
+       '&lt;/button&gt;';
+
+     document.getElementById('pagination').innerHTML = html;
+   }
+
+   function go(p) {
+     if (p &lt; 1 || p &gt; totalPg) return;
+     cur = p;
+
+     //const value = document.getElementById("searchbox").value.trim().toLowerCase();
+
+       renderTable(alltickets);
+
+
+
+
+     renderPagination();
+   }
+
+   /* ── Init ── */
+   renderTable(alltickets);
+   renderPagination();
+
+
+   document.getElementById("pagination").addEventListener("click", function (e) {
+
+     const btn = e.target.closest("button");
+     if (!btn) return;
+
+     if (btn.id === "prevBtn" &amp;&amp; cur &gt; 1) {
+       go(cur - 1);
+     }
+
+     else if (btn.id === "nextBtn" &amp;&amp; cur &lt; totalPg) {
+       go(cur + 1);
+     }
+
+     else if (btn.id.startsWith("pageBtn_")) {
+       const page = parseInt(btn.id.split("_")[1]);
+       console.log('page:', page)
+       go(page);
+     }
+
+   });
+
+   // document.getElementById("searchbox").addEventListener("change", function () {
+   //   const value = this.value.trim().toLowerCase();
+
+   //   if (value === "") {
+   //     filteredTickets = tickets; // reset
+   //   } else {
+   //     filteredTickets = tickets.filter(t =&gt;
+   //       (t.title || "").toLowerCase().includes(value) ||
+   //       (t.category || "").toLowerCase().includes(value) ||
+   //       (t.priority || "").toLowerCase().includes(value) ||
+   //       (t.status || "").toLowerCase().includes(value) ||
+   //       (t.id || "").toLowerCase().includes(value)
+   //     );
+   //   }
+
+   //   cur = 1;
+   //   totalPg = Math.ceil(filteredTickets.length / PER_PAGE);
+   //   console.log('filtered', filteredTickets)
+
+   //   renderTable(filteredTickets);
+   //   renderPagination();
+   // });
+&lt;/script&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+manager-dashboard</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

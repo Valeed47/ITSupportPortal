@@ -1,0 +1,261 @@
+<powerpagecomponent powerpagecomponentid="5f4edb74-75a7-491d-9b18-130935fbc5da">
+  <content>{
+  "filecontent": null,
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150005,
+  "hiddenfromsitemap": false,
+  "isroot": false,
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "partialurl": "/",
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "rootwebpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "sharedpageconfiguration": false,
+  "summary": "&lt;p&gt;This is a sample landing page for you to start creating your website.&lt;/p&gt;",
+  "title": "Home",
+  "parentpageid": null,
+  "customjavascript": "function showTab(tab, btn) {\r\n  document.querySelectorAll('.tab-btn').forEach(b =&gt; b.classList.remove('active'));\r\n  btn.classList.add('active');\r\n  document.getElementById('login-view').style.display = tab === 'login' ? 'block' : 'none';\r\n  document.getElementById('register-view').style.display = tab === 'register' ? 'block' : 'none';\r\n}\r\nfunction switchToRegister() { showTab('register', document.querySelectorAll('.tab-btn')[1]); }\r\nfunction switchToLogin() { showTab('login', document.querySelectorAll('.tab-btn')[0]); }",
+  "copy": "{%if user%}\n&lt;div class=\"hero hero--employee\"&gt;\n  &lt;p class=\"hero-eyebrow hero-eyebrow--employee\"&gt;Welcome back, {{user.fullname}}&lt;/p&gt;\n  &lt;h1&gt;How can we help you today?&lt;/h1&gt;\n  &lt;p&gt;Submit tickets, track issues and find answers in the knowledge base.&lt;/p&gt;\n  &lt;div class=\"hero-btns\"&gt;\n    &lt;button class=\"btn-hero-primary\" id=\"sbmtbtn\"&gt;Submit a ticket&lt;/button&gt;\n    &lt;button class=\"btn-hero-outline\"&gt;Knowledge base&lt;/button&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=\"stats-bar stats-bar--employee\"&gt;\n  &lt;div class=\"stat-item\"&gt;\n    &lt;div class=\"stat-num\"&gt;142&lt;/div&gt;\n    &lt;div class=\"stat-lbl stat-lbl--employee\"&gt;Tickets this month&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"stat-item\"&gt;\n    &lt;div class=\"stat-num\"&gt;94%&lt;/div&gt;\n    &lt;div class=\"stat-lbl stat-lbl--employee\"&gt;Resolution rate&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"stat-item\"&gt;\n    &lt;div class=\"stat-num\"&gt;3.2h&lt;/div&gt;\n    &lt;div class=\"stat-lbl stat-lbl--employee\"&gt;Avg. response&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div class=\"stat-item\"&gt;\n    &lt;div class=\"stat-num\"&gt;4.8&lt;/div&gt;\n    &lt;div class=\"stat-lbl stat-lbl--employee\"&gt;Satisfaction&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=\"page-wrapper\" id=\"pageWrapper\"&gt;\n  &lt;!-- &lt;div class=\"overlay\" id=\"overlay\" onclick=\"closeNav()\"&gt;&lt;/div&gt;\n\n  &lt;aside class=\"sidenav\" id=\"sidenav\"&gt;\n    &lt;div class=\"sidenav-head\"&gt;\n      &lt;div class=\"sidenav-avatar sidenav-avatar--employee\"&gt;JS&lt;/div&gt;\n      &lt;div&gt;\n        &lt;p class=\"sidenav-username\"&gt;John Smith&lt;/p&gt;\n        &lt;p class=\"sidenav-role sidenav-role--employee\"&gt;Employee&lt;/p&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\"nav-scroll\"&gt;\n      &lt;p class=\"nav-group-label\"&gt;Main menu&lt;/p&gt;\n      &lt;a href=\"home.html\" class=\"nav-item active--employee\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M2 3h5v5H2V3zm0 6h5v5H2V9zm7-6h5v5H9V3zm0 6h5v5H9V9z\" /&gt;\n        &lt;/svg&gt;Home\n      &lt;/a&gt;\n      &lt;a href=\"submit-ticket.html\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path\n            d=\"M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z\" /&gt;\n        &lt;/svg&gt;Submit ticket\n      &lt;/a&gt;\n      &lt;p class=\"nav-group-label\"&gt;My tickets&lt;/p&gt;\n      &lt;a href=\"my-tickets.html\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10H7.25V7.25h1.5V11zm0-5.25H7.25v-1.5h1.5v1.5z\" /&gt;\n        &lt;/svg&gt;All my tickets\n        &lt;span class=\"nav-badge nav-badge--blue\"&gt;4&lt;/span&gt;\n      &lt;/a&gt;\n      &lt;a href=\"my-tickets.html\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM8 4v4.5l3 1.5-.75 1.5L7 9.5V4h1z\" /&gt;\n        &lt;/svg&gt;Open tickets\n        &lt;span class=\"nav-badge nav-badge--red\"&gt;2&lt;/span&gt;\n      &lt;/a&gt;\n      &lt;a href=\"my-tickets.html\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M8 1a7 7 0 100 14A7 7 0 008 1zm3.03 4.47L7 9.5 5.47 7.97l-1.06 1.06L7 11.62l5.09-5.09-1.06-1.06z\" /&gt;\n        &lt;/svg&gt;Resolved\n      &lt;/a&gt;\n      &lt;p class=\"nav-group-label\"&gt;Self service&lt;/p&gt;\n      &lt;a href=\"knowledge-base.html\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path\n            d=\"M3 2h10a1 1 0 011 1v1H2V3a1 1 0 011-1zM2 5h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm3 2.5v1h6v-1H5zm0 2.5v1h4v-1H5z\" /&gt;\n        &lt;/svg&gt;Knowledge base\n      &lt;/a&gt;\n      &lt;a href=\"#\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z\" /&gt;\n        &lt;/svg&gt;Request access\n      &lt;/a&gt;\n      &lt;a href=\"#\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path\n            d=\"M2 4.5A1.5 1.5 0 013.5 3h9A1.5 1.5 0 0114 4.5v7a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 11.5v-7zm1.5-.5a.5.5 0 00-.5.5v.5h10v-.5a.5.5 0 00-.5-.5h-9zM3 6.5v5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-5H3z\" /&gt;\n        &lt;/svg&gt;IT policies\n      &lt;/a&gt;\n      &lt;div class=\"nav-divider\"&gt;&lt;/div&gt;\n      &lt;a href=\"#\" class=\"nav-item\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path d=\"M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z\" /&gt;\n        &lt;/svg&gt;My profile\n      &lt;/a&gt;\n    &lt;/div&gt;\n    &lt;div class=\"sidenav-footer\"&gt;\n      &lt;div class=\"logout-btn\" onclick=\"window.location.href='login.html'\"&gt;\n        &lt;svg viewBox=\"0 0 16 16\"&gt;\n          &lt;path\n            d=\"M6 2h4a2 2 0 012 2v1h-1.5V4a.5.5 0 00-.5-.5H6a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-1H12v1a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zm3.25 5.25H5v1.5h4.25l-1.5 1.5 1.06 1.06L12 8.5l-3.19-3.31-1.06 1.06 1.5 1.5z\" /&gt;\n        &lt;/svg&gt;\n        Logout\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/aside&gt; --&gt;\n\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"notice-bar\"&gt;\n      &lt;svg viewBox=\"0 0 16 16\"&gt;\n        &lt;path d=\"M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10.5h-1.5v-5h1.5v5zm0-6.5h-1.5V3.5h1.5V5z\" /&gt;\n      &lt;/svg&gt;\n      &lt;p&gt;&lt;strong&gt;IT maintenance:&lt;/strong&gt; Saturday 2:00–4:00 AM. Some services may be unavailable.&lt;/p&gt;\n    &lt;/div&gt;\n\n    &lt;p class=\"section-title\"&gt;What can we help you with?&lt;/p&gt;\n    &lt;div class=\"feature-grid\"&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--blue\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;Submit a ticket&lt;/p&gt;a\n        &lt;p class=\"feature-desc\"&gt;Report hardware, software or network issues.&lt;/p&gt;\n        &lt;a href=\"submit-ticket.html\" class=\"feature-link\"&gt;Open ticket →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--teal\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10H7.25V7.25h1.5V11zm0-5.25H7.25v-1.5h1.5v1.5z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;Track my tickets&lt;/p&gt;\n        &lt;p class=\"feature-desc\"&gt;View status of all open and resolved tickets.&lt;/p&gt;\n        &lt;a href=\"my-tickets.html\" class=\"feature-link\"&gt;View tickets →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--orange\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M3 2h10a1 1 0 011 1v1H2V3a1 1 0 011-1zM2 5h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm3 2.5v1h6v-1H5zm0 2.5v1h4v-1H5z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;Knowledge base&lt;/p&gt;\n        &lt;p class=\"feature-desc\"&gt;Browse self-help guides before raising a ticket.&lt;/p&gt;\n        &lt;a href=\"knowledge-base.html\" class=\"feature-link\"&gt;Browse →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--green\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M8 1a7 7 0 100 14A7 7 0 008 1zm3.03 4.47L7 9.5 5.47 7.97l-1.06 1.06L7 11.62l5.09-5.09-1.06-1.06z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;Request access&lt;/p&gt;\n        &lt;p class=\"feature-desc\"&gt;Request software or shared drive access.&lt;/p&gt;\n        &lt;a href=\"#\" class=\"feature-link\"&gt;Request →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--purple\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;New employee setup&lt;/p&gt;\n        &lt;p class=\"feature-desc\"&gt;Onboarding checklist — accounts and equipment.&lt;/p&gt;\n        &lt;a href=\"#\" class=\"feature-link\"&gt;Start →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"feature-card\"&gt;\n        &lt;div class=\"feature-icon feature-icon--navy\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\"&gt;\n            &lt;path d=\"M2 4.5A1.5 1.5 0 013.5 3h9A1.5 1.5 0 0114 4.5v7a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 11.5v-7zm1.5-.5a.5.5 0 00-.5.5v.5h10v-.5a.5.5 0 00-.5-.5h-9zM3 6.5v5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-5H3zm2 1.5h6v1H5V8zm0 2h4v1H5v-1z\" /&gt;\n          &lt;/svg&gt;\n        &lt;/div&gt;\n        &lt;p class=\"feature-title\"&gt;IT policies&lt;/p&gt;\n        &lt;p class=\"feature-desc\"&gt;Acceptable use and security standards.&lt;/p&gt;\n        &lt;a href=\"#\" class=\"feature-link\"&gt;View →&lt;/a&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"card\"&gt;\n      &lt;div class=\"card-head\"&gt;\n        &lt;h3&gt;My recent tickets&lt;/h3&gt;\n        &lt;a href=\"my-tickets.html\" class=\"card-link\"&gt;View all →&lt;/a&gt;\n      &lt;/div&gt;\n      &lt;div class=\"ticket-row\"&gt;\n        &lt;div class=\"ticket-dot ticket-dot--prog\"&gt;&lt;/div&gt;\n        &lt;div class=\"ticket-info\"&gt;\n          &lt;p class=\"ticket-title\"&gt;Laptop screen flickering on startup&lt;/p&gt;\n          &lt;p class=\"ticket-meta\"&gt;TKT-0041 &amp;middot; Hardware &amp;middot; 2h ago&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;span class=\"badge badge--prog\"&gt;In progress&lt;/span&gt;\n      &lt;/div&gt;\n      &lt;div class=\"ticket-row\"&gt;\n        &lt;div class=\"ticket-dot ticket-dot--new\"&gt;&lt;/div&gt;\n        &lt;div class=\"ticket-info\"&gt;\n          &lt;p class=\"ticket-title\"&gt;Cannot access shared drive — Finance&lt;/p&gt;\n          &lt;p class=\"ticket-meta\"&gt;TKT-0039 &amp;middot; Access &amp;middot; 1d ago&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;span class=\"badge badge--high\"&gt;High&lt;/span&gt;\n      &lt;/div&gt;\n      &lt;div class=\"ticket-row\"&gt;\n        &lt;div class=\"ticket-dot ticket-dot--done\"&gt;&lt;/div&gt;\n        &lt;div class=\"ticket-info\"&gt;\n          &lt;p class=\"ticket-title\"&gt;Outlook not syncing calendar with Teams&lt;/p&gt;\n          &lt;p class=\"ticket-meta\"&gt;TKT-0035 &amp;middot; Software &amp;middot; 3d ago&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;span class=\"badge badge--done\"&gt;Resolved&lt;/span&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n{%else%}\n\n&lt;script&gt;\n  window.location.href = \"/signin\";\n&lt;/script&gt;\n\n{%endif%}\n\n&lt;script&gt;\n    document.getElementById(\"sbmtbtn\").addEventListener(\"click\", function () {\n      window.location.href = \"/submit\";\n  });\n&lt;/script&gt;\n&lt;div class=\"row sectionBlockLayout text-start\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;&lt;div class=\"col-lg-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Home</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Home{%if user%}
+&lt;div class="hero hero--employee"&gt;
+  &lt;p class="hero-eyebrow hero-eyebrow--employee"&gt;Welcome back, {{user.fullname}}&lt;/p&gt;
+  &lt;h1&gt;How can we help you today?&lt;/h1&gt;
+  &lt;p&gt;Submit tickets, track issues and find answers in the knowledge base.&lt;/p&gt;
+  &lt;div class="hero-btns"&gt;
+    &lt;button class="btn-hero-primary" id="sbmtbtn"&gt;Submit a ticket&lt;/button&gt;
+    &lt;button class="btn-hero-outline"&gt;Knowledge base&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="stats-bar stats-bar--employee"&gt;
+  &lt;div class="stat-item"&gt;
+    &lt;div class="stat-num"&gt;142&lt;/div&gt;
+    &lt;div class="stat-lbl stat-lbl--employee"&gt;Tickets this month&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="stat-item"&gt;
+    &lt;div class="stat-num"&gt;94%&lt;/div&gt;
+    &lt;div class="stat-lbl stat-lbl--employee"&gt;Resolution rate&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="stat-item"&gt;
+    &lt;div class="stat-num"&gt;3.2h&lt;/div&gt;
+    &lt;div class="stat-lbl stat-lbl--employee"&gt;Avg. response&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="stat-item"&gt;
+    &lt;div class="stat-num"&gt;4.8&lt;/div&gt;
+    &lt;div class="stat-lbl stat-lbl--employee"&gt;Satisfaction&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="page-wrapper" id="pageWrapper"&gt;
+  &lt;!-- &lt;div class="overlay" id="overlay" onclick="closeNav()"&gt;&lt;/div&gt;
+
+  &lt;aside class="sidenav" id="sidenav"&gt;
+    &lt;div class="sidenav-head"&gt;
+      &lt;div class="sidenav-avatar sidenav-avatar--employee"&gt;JS&lt;/div&gt;
+      &lt;div&gt;
+        &lt;p class="sidenav-username"&gt;John Smith&lt;/p&gt;
+        &lt;p class="sidenav-role sidenav-role--employee"&gt;Employee&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nav-scroll"&gt;
+      &lt;p class="nav-group-label"&gt;Main menu&lt;/p&gt;
+      &lt;a href="home.html" class="nav-item active--employee"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M2 3h5v5H2V3zm0 6h5v5H2V9zm7-6h5v5H9V3zm0 6h5v5H9V9z" /&gt;
+        &lt;/svg&gt;Home
+      &lt;/a&gt;
+      &lt;a href="submit-ticket.html" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path
+            d="M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z" /&gt;
+        &lt;/svg&gt;Submit ticket
+      &lt;/a&gt;
+      &lt;p class="nav-group-label"&gt;My tickets&lt;/p&gt;
+      &lt;a href="my-tickets.html" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10H7.25V7.25h1.5V11zm0-5.25H7.25v-1.5h1.5v1.5z" /&gt;
+        &lt;/svg&gt;All my tickets
+        &lt;span class="nav-badge nav-badge--blue"&gt;4&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;a href="my-tickets.html" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM8 4v4.5l3 1.5-.75 1.5L7 9.5V4h1z" /&gt;
+        &lt;/svg&gt;Open tickets
+        &lt;span class="nav-badge nav-badge--red"&gt;2&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;a href="my-tickets.html" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.03 4.47L7 9.5 5.47 7.97l-1.06 1.06L7 11.62l5.09-5.09-1.06-1.06z" /&gt;
+        &lt;/svg&gt;Resolved
+      &lt;/a&gt;
+      &lt;p class="nav-group-label"&gt;Self service&lt;/p&gt;
+      &lt;a href="knowledge-base.html" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path
+            d="M3 2h10a1 1 0 011 1v1H2V3a1 1 0 011-1zM2 5h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm3 2.5v1h6v-1H5zm0 2.5v1h4v-1H5z" /&gt;
+        &lt;/svg&gt;Knowledge base
+      &lt;/a&gt;
+      &lt;a href="#" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z" /&gt;
+        &lt;/svg&gt;Request access
+      &lt;/a&gt;
+      &lt;a href="#" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path
+            d="M2 4.5A1.5 1.5 0 013.5 3h9A1.5 1.5 0 0114 4.5v7a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 11.5v-7zm1.5-.5a.5.5 0 00-.5.5v.5h10v-.5a.5.5 0 00-.5-.5h-9zM3 6.5v5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-5H3z" /&gt;
+        &lt;/svg&gt;IT policies
+      &lt;/a&gt;
+      &lt;div class="nav-divider"&gt;&lt;/div&gt;
+      &lt;a href="#" class="nav-item"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path d="M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z" /&gt;
+        &lt;/svg&gt;My profile
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="sidenav-footer"&gt;
+      &lt;div class="logout-btn" onclick="window.location.href='login.html'"&gt;
+        &lt;svg viewBox="0 0 16 16"&gt;
+          &lt;path
+            d="M6 2h4a2 2 0 012 2v1h-1.5V4a.5.5 0 00-.5-.5H6a.5.5 0 00-.5.5v8a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-1H12v1a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2zm3.25 5.25H5v1.5h4.25l-1.5 1.5 1.06 1.06L12 8.5l-3.19-3.31-1.06 1.06 1.5 1.5z" /&gt;
+        &lt;/svg&gt;
+        Logout
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt; --&gt;
+
+  &lt;main class="main"&gt;
+    &lt;div class="notice-bar"&gt;
+      &lt;svg viewBox="0 0 16 16"&gt;
+        &lt;path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10.5h-1.5v-5h1.5v5zm0-6.5h-1.5V3.5h1.5V5z" /&gt;
+      &lt;/svg&gt;
+      &lt;p&gt;&lt;strong&gt;IT maintenance:&lt;/strong&gt; Saturday 2:00–4:00 AM. Some services may be unavailable.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;p class="section-title"&gt;What can we help you with?&lt;/p&gt;
+    &lt;div class="feature-grid"&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--blue"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;Submit a ticket&lt;/p&gt;a
+        &lt;p class="feature-desc"&gt;Report hardware, software or network issues.&lt;/p&gt;
+        &lt;a href="submit-ticket.html" class="feature-link"&gt;Open ticket →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--teal"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 10H7.25V7.25h1.5V11zm0-5.25H7.25v-1.5h1.5v1.5z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;Track my tickets&lt;/p&gt;
+        &lt;p class="feature-desc"&gt;View status of all open and resolved tickets.&lt;/p&gt;
+        &lt;a href="my-tickets.html" class="feature-link"&gt;View tickets →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--orange"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M3 2h10a1 1 0 011 1v1H2V3a1 1 0 011-1zM2 5h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V5zm3 2.5v1h6v-1H5zm0 2.5v1h4v-1H5z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;Knowledge base&lt;/p&gt;
+        &lt;p class="feature-desc"&gt;Browse self-help guides before raising a ticket.&lt;/p&gt;
+        &lt;a href="knowledge-base.html" class="feature-link"&gt;Browse →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--green"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.03 4.47L7 9.5 5.47 7.97l-1.06 1.06L7 11.62l5.09-5.09-1.06-1.06z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;Request access&lt;/p&gt;
+        &lt;p class="feature-desc"&gt;Request software or shared drive access.&lt;/p&gt;
+        &lt;a href="#" class="feature-link"&gt;Request →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--purple"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;New employee setup&lt;/p&gt;
+        &lt;p class="feature-desc"&gt;Onboarding checklist — accounts and equipment.&lt;/p&gt;
+        &lt;a href="#" class="feature-link"&gt;Start →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="feature-card"&gt;
+        &lt;div class="feature-icon feature-icon--navy"&gt;
+          &lt;svg viewBox="0 0 16 16"&gt;
+            &lt;path d="M2 4.5A1.5 1.5 0 013.5 3h9A1.5 1.5 0 0114 4.5v7a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 11.5v-7zm1.5-.5a.5.5 0 00-.5.5v.5h10v-.5a.5.5 0 00-.5-.5h-9zM3 6.5v5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5v-5H3zm2 1.5h6v1H5V8zm0 2h4v1H5v-1z" /&gt;
+          &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;p class="feature-title"&gt;IT policies&lt;/p&gt;
+        &lt;p class="feature-desc"&gt;Acceptable use and security standards.&lt;/p&gt;
+        &lt;a href="#" class="feature-link"&gt;View →&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card"&gt;
+      &lt;div class="card-head"&gt;
+        &lt;h3&gt;My recent tickets&lt;/h3&gt;
+        &lt;a href="my-tickets.html" class="card-link"&gt;View all →&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="ticket-row"&gt;
+        &lt;div class="ticket-dot ticket-dot--prog"&gt;&lt;/div&gt;
+        &lt;div class="ticket-info"&gt;
+          &lt;p class="ticket-title"&gt;Laptop screen flickering on startup&lt;/p&gt;
+          &lt;p class="ticket-meta"&gt;TKT-0041 &amp;middot; Hardware &amp;middot; 2h ago&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;span class="badge badge--prog"&gt;In progress&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="ticket-row"&gt;
+        &lt;div class="ticket-dot ticket-dot--new"&gt;&lt;/div&gt;
+        &lt;div class="ticket-info"&gt;
+          &lt;p class="ticket-title"&gt;Cannot access shared drive — Finance&lt;/p&gt;
+          &lt;p class="ticket-meta"&gt;TKT-0039 &amp;middot; Access &amp;middot; 1d ago&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;span class="badge badge--high"&gt;High&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class="ticket-row"&gt;
+        &lt;div class="ticket-dot ticket-dot--done"&gt;&lt;/div&gt;
+        &lt;div class="ticket-info"&gt;
+          &lt;p class="ticket-title"&gt;Outlook not syncing calendar with Teams&lt;/p&gt;
+          &lt;p class="ticket-meta"&gt;TKT-0035 &amp;middot; Software &amp;middot; 3d ago&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;span class="badge badge--done"&gt;Resolved&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+{%else%}
+
+&lt;script&gt;
+  window.location.href = "/signin";
+&lt;/script&gt;
+
+{%endif%}
+
+&lt;script&gt;
+    document.getElementById("sbmtbtn").addEventListener("click", function () {
+      window.location.href = "/submit";
+  });
+&lt;/script&gt;
+&lt;div class="row sectionBlockLayout text-start" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;&lt;div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;Home</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

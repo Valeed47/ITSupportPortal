@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="7f704a17-a922-f111-8342-000d3ab2c460">
+  <content>{
+  "source": "&lt;head&gt;\r\n    &lt;meta charset=\"UTF-8\" /&gt;\r\n    &lt;meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /&gt;\r\n    &lt;title&gt;IT Support Portal — Login&lt;/title&gt;\r\n    &lt;link rel=\"stylesheet\" href=\"/bootstrap.min.css\" /&gt;\r\n    &lt;link rel=\"stylesheet\" href=\"/style.css\" /&gt;\r\n     &lt;script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"&gt;&lt;/script&gt;\r\n\r\n&lt;/head&gt;\r\n\r\n&lt;body&gt;\r\n    {%if user%}\r\n   \r\n{%include 'Navigation Wrapper'%}\r\n{%include 'WebApi Wrapper'%}\r\n    {%include 'Page Copy'%}\r\n    {%else%}\r\n    &lt;script&gt;\r\n        window.location.href = \"/signin\";  // change to your login page\r\n    &lt;/script&gt;\r\n\r\n    {%endif%}\r\n&lt;/body&gt;\r\n\r\n&lt;footer class=\"site-footer site-footer--employee\"&gt;\r\n    &lt;p class=\"footer-copy--employee\"&gt;IT Support Portal &amp;copy; 2025 &amp;mdash; Powered by Microsoft Power Pages&lt;/p&gt;\r\n    &lt;div class=\"footer-links footer-links--employee\"&gt;\r\n        &lt;a href=\"#\"&gt;ext. 1234&lt;/a&gt;\r\n        &lt;a href=\"#\"&gt;Email IT&lt;/a&gt;\r\n        &lt;a href=\"#\"&gt;Privacy&lt;/a&gt;\r\n    &lt;/div&gt;\r\n&lt;/footer&gt;\r\n\r\n&lt;/html&gt;"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>IT Support Portal Template</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

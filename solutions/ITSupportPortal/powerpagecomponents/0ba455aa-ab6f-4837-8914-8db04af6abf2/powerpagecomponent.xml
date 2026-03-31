@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="0ba455aa-ab6f-4837-8914-8db04af6abf2">
+  <content>{"source":"&lt;div class=\"page-header\"&gt;\r\n    &lt;h1&gt;{% editable page 'adx_title' type: 'html', liquid: true %}&lt;/h1&gt;\r\n&lt;/div&gt;"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Page Header</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

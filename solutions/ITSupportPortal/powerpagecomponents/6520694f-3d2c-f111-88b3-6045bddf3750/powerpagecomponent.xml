@@ -1,0 +1,19 @@
+<powerpagecomponent powerpagecomponentid="6520694f-3d2c-f111-88b3-6045bddf3750">
+  <content>{
+  "partialurl": "style.css",
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "contentdisposition": 756150000,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63"
+}</content>
+  <filecontent mimetype="text/css">test.css</filecontent>
+  <iscustomizable>1</iscustomizable>
+  <name>style.css</name>
+  <powerpagecomponenttype>3</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

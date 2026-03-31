@@ -1,0 +1,188 @@
+<powerpagecomponent powerpagecomponentid="c3e12059-0923-f111-8341-000d3ab2bd64">
+  <content>{
+  "filecontent": null,
+  "partialurl": "ticketdetail",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": false,
+  "sharedpageconfiguration": true,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "isofflinecached": false,
+  "rootwebpageid": "c2e12059-0923-f111-8341-000d3ab2bd64",
+  "copy": "{% assign id = request.params.id %}\n{% fetchxml ticketRecord %}\n&lt;fetch&gt;\n\t&lt;!-- Table --&gt;\n\t&lt;entity name=\"it_request\"&gt;\n\t\t&lt;!-- Columns --&gt;\n\t\t&lt;attribute name=\"it_requestid\" /&gt;\n\t\t&lt;attribute name=\"it_affecteddevice\" /&gt;\n\t\t&lt;attribute name=\"it_category\" /&gt;\n\t\t&lt;attribute name=\"it_categoryname\" /&gt;\n\t\t&lt;attribute name=\"it_priority\" /&gt;\n\t\t&lt;attribute name=\"it_priorityname\" /&gt;\n\t\t&lt;attribute name=\"it_requeststatus\" /&gt;\n\t\t&lt;attribute name=\"it_requeststatusname\" /&gt;\n    &lt;attribute name=\"createdby\" /&gt;\n\t\t&lt;attribute name=\"it_startdate\" /&gt;\n\t\t&lt;attribute name=\"it_newcolumn\" /&gt;\n\t\t&lt;attribute name=\"it_tickettitle\" /&gt;\n    &lt;attribute name=\"it_description\" /&gt;\n\t\t&lt;filter type=\"and\"&gt;\n\t\t\t&lt;!-- Primary Id --&gt;\n\t\t\t&lt;condition attribute=\"it_requestid\" operator=\"eq\" value=\"{{id}}\" /&gt;\n\t\t&lt;/filter&gt;\n\t&lt;/entity&gt;\n&lt;/fetch&gt;\n{% endfetchxml %}\n\n{% assign ticket = ticketRecord.results.entities[0] %}\n{% assign ticketId = ticket.it_requestid %}\n{% assign title = ticket.it_tickettitle %}\n{% assign category = ticket.it_category.label %}\n{% assign priority = ticket.it_priority.label %}\n{% assign status = ticket.it_requeststatus.label %}\n{% assign startDate = ticket.it_startdate %}\n{% assign device = ticket.it_affecteddevice %}\n{% assign description = ticket.it_description %}\n{% assign createdby = ticket.createdby.name %}\n\n&lt;div class=\"hero hero--employee\" style=\"padding:16px 16px 14px\"&gt;\n  &lt;a href=\"my-tickets.html\" class=\"hero-back\"&gt;&amp;larr; My tickets&lt;/a&gt;\n  &lt;h1&gt;{{title}}&lt;/h1&gt;\n  &lt;div class=\"hero-meta\"&gt;\n    &lt;span class=\"badge badge--med\"&gt;{{priority}}&lt;/span&gt;\n    &lt;span class=\"badge badge--prog\"&gt;{{status}}&lt;/span&gt;\n    &lt;span style=\"font-size:10px;color:#93c5fd\"&gt; &amp;middot; {{category}} &amp;middot; {{startDate | date: \"%d/%M/%y\"}}&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div class=\"page-wrapper\" id=\"pageWrapper\"&gt;\n\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"two-col\"&gt;\n      &lt;div&gt;\n        &lt;div class=\"card\"&gt;\n          &lt;div class=\"card-head\"&gt;\n            &lt;h3&gt;Ticket details&lt;/h3&gt;\n          &lt;/div&gt;\n          &lt;div class=\"detail-grid\"&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Submitted by&lt;/label&gt;\n              &lt;p&gt;{{createdby}}&lt;/p&gt;\n            &lt;/div&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Date submitted&lt;/label&gt;\n              &lt;p&gt;{{startDate | date: \"%d/%M/%y\"}}&lt;/p&gt;\n            &lt;/div&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Category&lt;/label&gt;\n              &lt;p&gt;{{category}}&lt;/p&gt;\n            &lt;/div&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Priority&lt;/label&gt;\n              &lt;p&gt;&lt;span class=\"badge badge--med\"&gt;{{priority}}&lt;/span&gt;&lt;/p&gt;\n            &lt;/div&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Assigned agent&lt;/label&gt;\n              &lt;p&gt;Mark Davis&lt;/p&gt;\n            &lt;/div&gt;\n            &lt;div class=\"detail-item\"&gt;&lt;label&gt;Last updated&lt;/label&gt;\n              &lt;p&gt;Today, 11:30 AM&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div&gt;\n            &lt;p\n              style=\"font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;color:#6b7280;margin-bottom:5px\"&gt;\n              Description&lt;/p&gt;\n            &lt;p class=\"desc-box\"&gt;{{description}}&lt;/p&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n\n        &lt;div class=\"card\"&gt;\n          &lt;div class=\"card-head\"&gt;\n            &lt;h3&gt;Activity timeline&lt;/h3&gt;\n          &lt;/div&gt;\n          &lt;div class=\"timeline-item\"&gt;\n            &lt;div class=\"tl-dot tl-dot--green\"&gt;&lt;/div&gt;\n            &lt;div class=\"tl-line\"&gt;&lt;/div&gt;\n            &lt;div&gt;\n              &lt;p class=\"tl-title\"&gt;Ticket assigned to Mark Davis&lt;/p&gt;\n              &lt;p class=\"tl-time\"&gt;Today 10:05 AM&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=\"timeline-item\"&gt;\n            &lt;div class=\"tl-dot tl-dot--orange\"&gt;&lt;/div&gt;\n            &lt;div class=\"tl-line\"&gt;&lt;/div&gt;\n            &lt;div&gt;\n              &lt;p class=\"tl-title\"&gt;Status changed to In progress&lt;/p&gt;\n              &lt;p class=\"tl-time\"&gt;Today 10:05 AM&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=\"timeline-item\"&gt;\n            &lt;div class=\"tl-dot tl-dot--blue\"&gt;&lt;/div&gt;\n            &lt;div&gt;\n              &lt;p class=\"tl-title\"&gt;Ticket created&lt;/p&gt;\n              &lt;p class=\"tl-time\"&gt;Today 9:12 AM&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n\n      &lt;div&gt;\n        &lt;div class=\"card\"&gt;\n          &lt;div class=\"card-head\"&gt;\n            &lt;h3&gt;Comments&lt;/h3&gt;\n          &lt;/div&gt;\n          &lt;div class=\"comment-row\"&gt;\n            &lt;div class=\"comment-avatar comment-avatar--agent\"&gt;MD&lt;/div&gt;\n            &lt;div&gt;\n              &lt;p&gt;&lt;span class=\"comment-name\"&gt;Mark Davis&lt;/span&gt;&lt;span class=\"comment-time\"&gt;Today 11:30 AM &amp;middot; IT\n                  Agent&lt;/span&gt;&lt;/p&gt;\n              &lt;p class=\"comment-body\"&gt;Hi John, I've looked into this. It appears to be a display driver conflict from\n                the latest Windows patch. I'll push a driver rollback to your machine remotely — please restart when\n                prompted.&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=\"comment-row\"&gt;\n            &lt;div class=\"comment-avatar comment-avatar--user\"&gt;JS&lt;/div&gt;\n            &lt;div&gt;\n              &lt;p&gt;&lt;span class=\"comment-name\"&gt;John Smith&lt;/span&gt;&lt;span class=\"comment-time\"&gt;Today 11:45 AM&lt;/span&gt;&lt;/p&gt;\n              &lt;p class=\"comment-body\"&gt;Thanks Mark, I'll keep an eye out after the restart and let you know if it happens\n                again.&lt;/p&gt;\n            &lt;/div&gt;\n          &lt;/div&gt;\n          &lt;div class=\"comment-add\"&gt;\n            &lt;div class=\"form-group\"&gt;&lt;label for=\"new-comment\"&gt;Add a comment&lt;/label&gt;&lt;textarea id=\"new-comment\"\n                placeholder=\"Type your message here...\"&gt;&lt;/textarea&gt;&lt;/div&gt;\n            &lt;button class=\"btn-primary\"&gt;Post comment&lt;/button&gt;\n          &lt;/div&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n\n&lt;script&gt;\n console.log('size: ', `{{ ticketRecord.results.entities.size }}`)\nconst params = new URLSearchParams(window.location.search);\nconst id = params.get(\"id\");\n\nif (!id) {\n  // No id → block access\n  window.location.href = \"/error.html\"; // or redirect to list page\n}\n&lt;/script&gt;"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>TicketDetail</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>{% assign id = request.params.id %}
+{% fetchxml ticketRecord %}
+&lt;fetch&gt;
+	&lt;!-- Table --&gt;
+	&lt;entity name="it_request"&gt;
+		&lt;!-- Columns --&gt;
+		&lt;attribute name="it_requestid" /&gt;
+		&lt;attribute name="it_affecteddevice" /&gt;
+		&lt;attribute name="it_category" /&gt;
+		&lt;attribute name="it_categoryname" /&gt;
+		&lt;attribute name="it_priority" /&gt;
+		&lt;attribute name="it_priorityname" /&gt;
+		&lt;attribute name="it_requeststatus" /&gt;
+		&lt;attribute name="it_requeststatusname" /&gt;
+    &lt;attribute name="createdby" /&gt;
+		&lt;attribute name="it_startdate" /&gt;
+		&lt;attribute name="it_newcolumn" /&gt;
+		&lt;attribute name="it_tickettitle" /&gt;
+    &lt;attribute name="it_description" /&gt;
+		&lt;filter type="and"&gt;
+			&lt;!-- Primary Id --&gt;
+			&lt;condition attribute="it_requestid" operator="eq" value="{{id}}" /&gt;
+		&lt;/filter&gt;
+	&lt;/entity&gt;
+&lt;/fetch&gt;
+{% endfetchxml %}
+
+{% assign ticket = ticketRecord.results.entities[0] %}
+{% assign ticketId = ticket.it_requestid %}
+{% assign title = ticket.it_tickettitle %}
+{% assign category = ticket.it_category.label %}
+{% assign priority = ticket.it_priority.label %}
+{% assign status = ticket.it_requeststatus.label %}
+{% assign startDate = ticket.it_startdate %}
+{% assign device = ticket.it_affecteddevice %}
+{% assign description = ticket.it_description %}
+{% assign createdby = ticket.createdby.name %}
+
+&lt;div class="hero hero--employee" style="padding:16px 16px 14px"&gt;
+  &lt;a href="my-tickets.html" class="hero-back"&gt;&amp;larr; My tickets&lt;/a&gt;
+  &lt;h1&gt;{{title}}&lt;/h1&gt;
+  &lt;div class="hero-meta"&gt;
+    &lt;span class="badge badge--med"&gt;{{priority}}&lt;/span&gt;
+    &lt;span class="badge badge--prog"&gt;{{status}}&lt;/span&gt;
+    &lt;span style="font-size:10px;color:#93c5fd"&gt; &amp;middot; {{category}} &amp;middot; {{startDate | date: "%d/%M/%y"}}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="page-wrapper" id="pageWrapper"&gt;
+
+  &lt;main class="main"&gt;
+    &lt;div class="two-col"&gt;
+      &lt;div&gt;
+        &lt;div class="card"&gt;
+          &lt;div class="card-head"&gt;
+            &lt;h3&gt;Ticket details&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="detail-grid"&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Submitted by&lt;/label&gt;
+              &lt;p&gt;{{createdby}}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Date submitted&lt;/label&gt;
+              &lt;p&gt;{{startDate | date: "%d/%M/%y"}}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Category&lt;/label&gt;
+              &lt;p&gt;{{category}}&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Priority&lt;/label&gt;
+              &lt;p&gt;&lt;span class="badge badge--med"&gt;{{priority}}&lt;/span&gt;&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Assigned agent&lt;/label&gt;
+              &lt;p&gt;Mark Davis&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="detail-item"&gt;&lt;label&gt;Last updated&lt;/label&gt;
+              &lt;p&gt;Today, 11:30 AM&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;p
+              style="font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.03em;color:#6b7280;margin-bottom:5px"&gt;
+              Description&lt;/p&gt;
+            &lt;p class="desc-box"&gt;{{description}}&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="card"&gt;
+          &lt;div class="card-head"&gt;
+            &lt;h3&gt;Activity timeline&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="timeline-item"&gt;
+            &lt;div class="tl-dot tl-dot--green"&gt;&lt;/div&gt;
+            &lt;div class="tl-line"&gt;&lt;/div&gt;
+            &lt;div&gt;
+              &lt;p class="tl-title"&gt;Ticket assigned to Mark Davis&lt;/p&gt;
+              &lt;p class="tl-time"&gt;Today 10:05 AM&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="timeline-item"&gt;
+            &lt;div class="tl-dot tl-dot--orange"&gt;&lt;/div&gt;
+            &lt;div class="tl-line"&gt;&lt;/div&gt;
+            &lt;div&gt;
+              &lt;p class="tl-title"&gt;Status changed to In progress&lt;/p&gt;
+              &lt;p class="tl-time"&gt;Today 10:05 AM&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="timeline-item"&gt;
+            &lt;div class="tl-dot tl-dot--blue"&gt;&lt;/div&gt;
+            &lt;div&gt;
+              &lt;p class="tl-title"&gt;Ticket created&lt;/p&gt;
+              &lt;p class="tl-time"&gt;Today 9:12 AM&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div&gt;
+        &lt;div class="card"&gt;
+          &lt;div class="card-head"&gt;
+            &lt;h3&gt;Comments&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div class="comment-row"&gt;
+            &lt;div class="comment-avatar comment-avatar--agent"&gt;MD&lt;/div&gt;
+            &lt;div&gt;
+              &lt;p&gt;&lt;span class="comment-name"&gt;Mark Davis&lt;/span&gt;&lt;span class="comment-time"&gt;Today 11:30 AM &amp;middot; IT
+                  Agent&lt;/span&gt;&lt;/p&gt;
+              &lt;p class="comment-body"&gt;Hi John, I've looked into this. It appears to be a display driver conflict from
+                the latest Windows patch. I'll push a driver rollback to your machine remotely — please restart when
+                prompted.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment-row"&gt;
+            &lt;div class="comment-avatar comment-avatar--user"&gt;JS&lt;/div&gt;
+            &lt;div&gt;
+              &lt;p&gt;&lt;span class="comment-name"&gt;John Smith&lt;/span&gt;&lt;span class="comment-time"&gt;Today 11:45 AM&lt;/span&gt;&lt;/p&gt;
+              &lt;p class="comment-body"&gt;Thanks Mark, I'll keep an eye out after the restart and let you know if it happens
+                again.&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="comment-add"&gt;
+            &lt;div class="form-group"&gt;&lt;label for="new-comment"&gt;Add a comment&lt;/label&gt;&lt;textarea id="new-comment"
+                placeholder="Type your message here..."&gt;&lt;/textarea&gt;&lt;/div&gt;
+            &lt;button class="btn-primary"&gt;Post comment&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+ console.log('size: ', `{{ ticketRecord.results.entities.size }}`)
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if (!id) {
+  // No id → block access
+  window.location.href = "/error.html"; // or redirect to list page
+}
+&lt;/script&gt;TicketDetail</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

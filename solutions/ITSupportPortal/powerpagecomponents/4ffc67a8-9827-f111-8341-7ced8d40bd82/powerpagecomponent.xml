@@ -1,0 +1,14 @@
+<powerpagecomponent powerpagecomponentid="4ffc67a8-9827-f111-8341-7ced8d40bd82">
+  <content>{
+  "value": "*",
+  "source": 0
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>WebApi/it_request/fields</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

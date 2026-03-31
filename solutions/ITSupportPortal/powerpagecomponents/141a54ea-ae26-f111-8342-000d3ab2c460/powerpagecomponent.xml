@@ -1,0 +1,24 @@
+<powerpagecomponent powerpagecomponentid="141a54ea-ae26-f111-8342-000d3ab2c460">
+  <content>{
+  "partialurl": "manager-dashboard",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": true,
+  "sharedpageconfiguration": true,
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "isofflinecached": false
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>manager-dashboard</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>manager-dashboard</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

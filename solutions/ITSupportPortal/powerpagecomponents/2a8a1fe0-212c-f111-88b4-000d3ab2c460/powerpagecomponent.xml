@@ -1,0 +1,13 @@
+<powerpagecomponent powerpagecomponentid="2a8a1fe0-212c-f111-88b4-000d3ab2c460">
+  <content>{
+  "source": "{% assign isEmployee = false %}\r\n{% assign isManager = false %}\r\n\r\n{% if user.roles contains 'Employee' %}\r\n  {% assign isEmployee = true %}\r\n  {% assign isManager = false %}\r\n{% endif %}\r\n\r\n{% if user.roles contains 'Manager' %}\r\n  {% assign isManager = true %}\r\n   {% assign isEmployee = false %}\r\n{% endif %}"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Roles</name>
+  <powerpagecomponenttype>8</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

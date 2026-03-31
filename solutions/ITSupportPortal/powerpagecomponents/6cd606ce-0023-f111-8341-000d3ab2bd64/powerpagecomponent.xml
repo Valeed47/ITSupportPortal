@@ -1,0 +1,377 @@
+<powerpagecomponent powerpagecomponentid="6cd606ce-0023-f111-8341-000d3ab2bd64">
+  <content>{
+  "filecontent": null,
+  "partialurl": "submit",
+  "feedbackpolicy": 756150000,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "enablerating": false,
+  "isroot": false,
+  "sharedpageconfiguration": true,
+  "parentpageid": "8860f327-aa0e-4946-bcba-adc8936b0d63",
+  "publishingstateid": "499c599d-1425-4031-96b2-d329588ae104",
+  "pagetemplateid": "a0e5f938-a922-f111-8342-000d3ab2c460",
+  "isofflinecached": false,
+  "rootwebpageid": "6bd606ce-0023-f111-8341-000d3ab2bd64",
+  "copy": "&lt;style&gt;\n  .priority-btn {\n    border: 2px solid #d1d5db;\n    /* gray border */\n    border-radius: 6px;\n    padding: 10px;\n    cursor: pointer;\n    transition: all 0.2s;\n    background-color: #ffffff;\n  }\n\n  .priority-btn:hover {\n    border-color: #2563eb;\n    /* blue on hover */\n  }\n\n  .priority-btn.selected {\n    border-color: #2563eb;\n    /* highlight border */\n    background-color: #bfdbfe;\n    /* light blue background */\n    color: #1d4ed8;\n    /* dark blue text */\n    font-weight: bold;\n  }\n&lt;/style&gt;\n\n&lt;div class=\"hero hero--employee\" style=\"padding:16px 16px 14px\"&gt;\n  &lt;p class=\"hero-eyebrow hero-eyebrow--employee\"&gt;New request&lt;/p&gt;\n  &lt;h1&gt;Submit a ticket&lt;/h1&gt;\n&lt;/div&gt;\n\n&lt;div class=\"page-wrapper\" id=\"pageWrapper\"&gt;\n\n\n  &lt;main class=\"main\"&gt;\n    &lt;div class=\"progress-row\"&gt;\n      &lt;div class=\"progress-step done\" id=\"step1\"&gt;\n        &lt;div class=\"progress-num\"&gt;&amp;#10003;&lt;/div&gt;Category\n      &lt;/div&gt;\n      &lt;div class=\"progress-line\"&gt;&lt;/div&gt;\n      &lt;div class=\"progress-step active\" id=\"step2\"&gt;\n        &lt;div class=\"progress-num\"&gt;2&lt;/div&gt;Issue details\n      &lt;/div&gt;\n      &lt;div class=\"progress-line\"&gt;&lt;/div&gt;\n      &lt;div class=\"progress-step\" id=\"step3\"&gt;\n        &lt;div class=\"progress-num\"&gt;3&lt;/div&gt;Priority\n      &lt;/div&gt;\n      &lt;div class=\"progress-line\"&gt;&lt;/div&gt;\n      &lt;div class=\"progress-step\" id=\"step4\"&gt;\n        &lt;div class=\"progress-num\"&gt;4&lt;/div&gt;Confirm\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"card\"&gt;\n      &lt;div class=\"card-head\"&gt;\n        &lt;h3&gt;Step 1 &amp;mdash; Select category&lt;/h3&gt;\n      &lt;/div&gt;\n      &lt;div class=\"category-grid\"&gt;\n        &lt;div class=\"category-btn selected\" value=\"0\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\" fill=\"#1d4ed8\"&gt;\n            &lt;path\n              d=\"M3 2a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3zm1 2h8v2H4V4zm0 3h3v5H4V7zm4 0h4v2H8V7z\" /&gt;\n          &lt;/svg&gt;\n          &lt;p&gt;Hardware&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"category-btn\" value=\"1\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\" fill=\"#6b7280\"&gt;\n            &lt;path\n              d=\"M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z\" /&gt;\n          &lt;/svg&gt;\n          &lt;p&gt;Software&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"category-btn\" value=\"2\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\" fill=\"#6b7280\"&gt;\n            &lt;path\n              d=\"M1 8a7 7 0 1114 0A7 7 0 011 8zm5-1h4v2H6V7zm-1-1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H6a1 1 0 01-1-1V6z\" /&gt;\n          &lt;/svg&gt;\n          &lt;p&gt;Network&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\"category-btn\" value=\"3\"&gt;\n          &lt;svg viewBox=\"0 0 16 16\" fill=\"#6b7280\"&gt;\n            &lt;path d=\"M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z\" /&gt;\n          &lt;/svg&gt;\n          &lt;p&gt;Access&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"card\"&gt;\n      &lt;div class=\"card-head\"&gt;\n        &lt;h3&gt;Step 2 &amp;mdash; Describe the issue&lt;/h3&gt;\n      &lt;/div&gt;\n      &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"ticket-title\"&gt;Ticket title&lt;/label&gt;\n        &lt;input type=\"text\" id=\"ticket-title\" placeholder=\"e.g. Laptop screen flickering on startup\" required /&gt;\n        &lt;p class=\"form-hint\"&gt;Be specific — a clear title helps IT agents resolve faster&lt;/p&gt;\n      &lt;/div&gt;\n      &lt;div class=\"form-group\"&gt;\n        &lt;label for=\"ticket-desc\"&gt;Description&lt;/label&gt;\n        &lt;textarea id=\"ticket-desc\"\n          placeholder=\"Describe the issue in detail. Include any error messages, steps to reproduce, and when it started...\"&gt;&lt;/textarea&gt;\n      &lt;/div&gt;\n      &lt;div class=\"field-row\"&gt;\n        &lt;div class=\"form-group\"&gt;\n          &lt;label for=\"ticket-device\"&gt;Affected device / software&lt;/label&gt;\n          &lt;input type=\"text\" id=\"ticket-device\" placeholder=\"e.g. Dell XPS 15, Microsoft Teams\" /&gt;\n        &lt;/div&gt;\n        &lt;div class=\"form-group\"&gt;\n          &lt;label for=\"ticket-date\"&gt;When did it start?&lt;/label&gt;\n          &lt;input type=\"date\" id=\"ticket-date\" /&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n\n    &lt;div class=\"card\"&gt;\n      &lt;div class=\"card-head\"&gt;\n        &lt;h3&gt;Step 3 &amp;mdash; Set priority&lt;/h3&gt;\n      &lt;/div&gt;\n      &lt;div class=\"priority-grid\"&gt;\n        &lt;div class=\"priority-btn priority-btn--low\" value=\"0\"&gt;\n          &lt;p&gt;Low&lt;/p&gt;&lt;span&gt;Non-urgent, can wait&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"priority-btn priority-btn--med\" value=\"1\"&gt;\n          &lt;p&gt;Medium&lt;/p&gt;&lt;span&gt;Affecting work slightly&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"priority-btn priority-btn--high\" value=\"2\"&gt;\n          &lt;p&gt;High&lt;/p&gt;&lt;span&gt;Blocking my work&lt;/span&gt;\n        &lt;/div&gt;\n        &lt;div class=\"priority-btn priority-btn--crit\" value=\"3\"&gt;\n          &lt;p&gt;Critical&lt;/p&gt;&lt;span&gt;Entire team affected&lt;/span&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n      &lt;div class=\"btn-row\"&gt;\n        &lt;button class=\"btn-primary\" id=\"btnSubmit\"&gt;Submit ticket&lt;/button&gt;\n        &lt;button class=\"btn-secondary\" onclick=\"window.location.href='home.html'\"&gt;Cancel&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/main&gt;\n&lt;/div&gt;\n\n&lt;script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"&gt;&lt;/script&gt;\n\n&lt;script&gt;\n\n\n\n\n\n\n  $(document).ready(function () {\n\n\n\n\n    var ticketTitle, description, affectedDevice, ticketDate, category, priority;\n\n    document.querySelectorAll('.category-btn').forEach(function (btn) {\n      btn.addEventListener('click', function (e) {\n\n        console.log('category: ', this.getAttribute('value'))\n        // remove selected from all\n        document.querySelectorAll('.category-btn').forEach(function (item) {\n          item.classList.remove('selected');\n        });\n\n        // add selected to clicked one\n        this.classList.add('selected');\n        category = this.getAttribute('value');\n      });\n    });\n\n    $('#ticket-title').on('input', function () {\n      console.log($(this).val());\n\n      ticketTitle = $(this).val();\n      description = $('#ticket-desc').val();\n      affectedDevice = $('#ticket-device').val();\n      ticketDate = $('#ticket-date').val();\n\n      if (ticketTitle != \"\" &amp;&amp; description != \"\" &amp;&amp; affectedDevice != \"\" &amp;&amp; ticketDate != \"\") {\n        // Mark step 1 as done (already has checkmark)\n        document.getElementById(\"step1\").classList.add(\"done\");\n\n        // Step 2 → done (remove active)\n        let step2 = document.getElementById(\"step2\");\n        step2.classList.remove(\"active\");\n        step2.classList.add(\"done\");\n\n        // Replace the number \"2\" with a checkmark\n        step2.querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n        // Step 3 → active\n        document.getElementById(\"step3\").classList.add(\"active\");\n\n      }\n\n    });\n\n    $('#ticket-desc').on('input', function () {\n\n      description = $(this).val();\n      ticketTitle = $('#ticket-title').val();\n      affectedDevice = $('#ticket-device').val();\n      ticketDate = $('#ticket-date').val();\n\n      if (ticketTitle != \"\" &amp;&amp; description != \"\" &amp;&amp; affectedDevice != \"\" &amp;&amp; ticketDate != \"\") {\n        // Step 1 → done\n        document.getElementById(\"step1\").classList.add(\"done\");\n\n        // Step 2 → done (remove active)\n        document.getElementById(\"step2\").classList.remove(\"active\");\n        document.getElementById(\"step2\").classList.add(\"done\");\n\n        // Replace the number \"2\" with a checkmark\n        document.getElementById(\"step2\").querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n        // Step 3 → active\n        document.getElementById(\"step3\").classList.add(\"active\");\n\n      }\n\n\n    });\n\n    $('#ticket-device').on('input', function () {\n\n      affectedDevice = $(this).val();\n      ticketTitle = $('#ticket-title').val();\n      description = $('#ticket-desc').val();\n      ticketDate = $('#ticket-date').val();\n\n      if (ticketTitle != \"\" &amp;&amp; description != \"\" &amp;&amp; affectedDevice != \"\" &amp;&amp; ticketDate != \"\") {\n        // Step 1 → done\n        document.getElementById(\"step1\").classList.add(\"done\");\n\n        // Step 2 → done (remove active)\n        document.getElementById(\"step2\").classList.remove(\"active\");\n        document.getElementById(\"step2\").classList.add(\"done\");\n\n        // Replace the number \"2\" with a checkmark\n        document.getElementById(\"step2\").querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n        // Step 3 → active\n        document.getElementById(\"step3\").classList.add(\"active\");\n\n      }\n\n\n    });\n\n    $('#ticket-date').on('input', function () {\n\n      ticketDate = $(this).val();\n      ticketTitle = $('#ticket-title').val();\n      description = $('#ticket-desc').val();\n      affectedDevice = $('#ticket-device').val();\n\n      if (ticketTitle != \"\" &amp;&amp; description != \"\" &amp;&amp; affectedDevice != \"\" &amp;&amp; ticketDate != \"\") {\n        // Step 1 → done\n        document.getElementById(\"step1\").classList.add(\"done\");\n\n        // Step 2 → done (remove active)\n        document.getElementById(\"step2\").classList.remove(\"active\");\n        document.getElementById(\"step2\").classList.add(\"done\");\n\n        // Replace the number \"2\" with a checkmark\n        document.getElementById(\"step2\").querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n        // Step 3 → active\n        document.getElementById(\"step3\").classList.add(\"active\");\n\n      }\n\n\n    });\n\n    // Select all priority buttons\n    const priorityButtons = document.querySelectorAll('.priority-btn');\n\n    priorityButtons.forEach(btn =&gt; {\n      btn.addEventListener('click', () =&gt; {\n        // Remove 'selected' class from all buttons\n        priorityButtons.forEach(b =&gt; b.classList.remove('selected'));\n\n        // Add 'selected' class to the clicked button\n        btn.classList.add('selected');\n        priority = document.querySelector('.priority-btn.selected').getAttribute('value');\n\n        if (priority != \"\") {\n          document.getElementById(\"step2\").classList.add(\"done\");\n\n          // Step 2 → done (remove active)\n          document.getElementById(\"step3\").classList.remove(\"active\");\n          document.getElementById(\"step3\").classList.add(\"done\");\n\n          // Replace the number \"2\" with a checkmark\n          document.getElementById(\"step3\").querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n          // Step 3 → active\n          document.getElementById(\"step4\").classList.add(\"active\");\n        }\n      });\n    });\n\n    document.getElementById(\"btnSubmit\").addEventListener(\"click\", function () {\n\n      var record = {};\n      record.it_description = document.getElementById(\"ticket-desc\").value;\n      record.it_tickettitle = document.getElementById(\"ticket-title\").value;\n      record.it_affecteddevice = document.getElementById(\"ticket-device\").value;\n      record.it_startdate = document.getElementById(\"ticket-date\").value;\n      record.it_category = category;\n      record.it_priority = priority;\n\n      webapi.safeAjax({\n        type: \"POST\",\n        contentType: \"application/json\",\n        url: \"/_api/it_requests\",\n        data: JSON.stringify(record),\n        success: function (data, textStatus, xhr) {\n          var newId = xhr.getResponseHeader(\"entityid\");\n          console.log(\"***\", newId);\n          document.getElementById(\"step3\").classList.add(\"done\");\n\n          // Step 2 → done (remove active)\n          document.getElementById(\"step4\").classList.remove(\"active\");\n          document.getElementById(\"step4\").classList.add(\"done\");\n\n          // Replace the number \"2\" with a checkmark\n          document.getElementById(\"step4\").querySelector(\".progress-num\").innerHTML = \"&amp;#10003;\";\n\n          // Step 3 → active\n          //  document.getElementById(\"step4\").classList.add(\"active\");\n        },\n        error: function (xhr, textStatus, errorThrown) {\n          console.log(xhr);\n        }\n      });\n\n    })\n\n\n  })\n\n\n\n&lt;/script&gt;"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>SubmitTicket</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>9b83af8c-d72e-46af-b1cc-a9a8d1cf9661</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>124caa50-13bc-4942-9797-a04be225e576</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;style&gt;
+  .priority-btn {
+    border: 2px solid #d1d5db;
+    /* gray border */
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: #ffffff;
+  }
+
+  .priority-btn:hover {
+    border-color: #2563eb;
+    /* blue on hover */
+  }
+
+  .priority-btn.selected {
+    border-color: #2563eb;
+    /* highlight border */
+    background-color: #bfdbfe;
+    /* light blue background */
+    color: #1d4ed8;
+    /* dark blue text */
+    font-weight: bold;
+  }
+&lt;/style&gt;
+
+&lt;div class="hero hero--employee" style="padding:16px 16px 14px"&gt;
+  &lt;p class="hero-eyebrow hero-eyebrow--employee"&gt;New request&lt;/p&gt;
+  &lt;h1&gt;Submit a ticket&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div class="page-wrapper" id="pageWrapper"&gt;
+
+
+  &lt;main class="main"&gt;
+    &lt;div class="progress-row"&gt;
+      &lt;div class="progress-step done" id="step1"&gt;
+        &lt;div class="progress-num"&gt;&amp;#10003;&lt;/div&gt;Category
+      &lt;/div&gt;
+      &lt;div class="progress-line"&gt;&lt;/div&gt;
+      &lt;div class="progress-step active" id="step2"&gt;
+        &lt;div class="progress-num"&gt;2&lt;/div&gt;Issue details
+      &lt;/div&gt;
+      &lt;div class="progress-line"&gt;&lt;/div&gt;
+      &lt;div class="progress-step" id="step3"&gt;
+        &lt;div class="progress-num"&gt;3&lt;/div&gt;Priority
+      &lt;/div&gt;
+      &lt;div class="progress-line"&gt;&lt;/div&gt;
+      &lt;div class="progress-step" id="step4"&gt;
+        &lt;div class="progress-num"&gt;4&lt;/div&gt;Confirm
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card"&gt;
+      &lt;div class="card-head"&gt;
+        &lt;h3&gt;Step 1 &amp;mdash; Select category&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="category-grid"&gt;
+        &lt;div class="category-btn selected" value="0"&gt;
+          &lt;svg viewBox="0 0 16 16" fill="#1d4ed8"&gt;
+            &lt;path
+              d="M3 2a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1H3zm1 2h8v2H4V4zm0 3h3v5H4V7zm4 0h4v2H8V7z" /&gt;
+          &lt;/svg&gt;
+          &lt;p&gt;Hardware&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="category-btn" value="1"&gt;
+          &lt;svg viewBox="0 0 16 16" fill="#6b7280"&gt;
+            &lt;path
+              d="M2 3a1 1 0 011-1h10a1 1 0 011 1v9a1 1 0 01-1 1H3a1 1 0 01-1-1V3zm1.5 1v7h9V4h-9zm1 1.5h7v1h-7v-1zm0 2.5h5v1H4.5V8z" /&gt;
+          &lt;/svg&gt;
+          &lt;p&gt;Software&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="category-btn" value="2"&gt;
+          &lt;svg viewBox="0 0 16 16" fill="#6b7280"&gt;
+            &lt;path
+              d="M1 8a7 7 0 1114 0A7 7 0 011 8zm5-1h4v2H6V7zm-1-1a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H6a1 1 0 01-1-1V6z" /&gt;
+          &lt;/svg&gt;
+          &lt;p&gt;Network&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="category-btn" value="3"&gt;
+          &lt;svg viewBox="0 0 16 16" fill="#6b7280"&gt;
+            &lt;path d="M8 1a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm-5 9.5a1 1 0 011-1h8a1 1 0 011 1V14H3v-3.5z" /&gt;
+          &lt;/svg&gt;
+          &lt;p&gt;Access&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card"&gt;
+      &lt;div class="card-head"&gt;
+        &lt;h3&gt;Step 2 &amp;mdash; Describe the issue&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="ticket-title"&gt;Ticket title&lt;/label&gt;
+        &lt;input type="text" id="ticket-title" placeholder="e.g. Laptop screen flickering on startup" required /&gt;
+        &lt;p class="form-hint"&gt;Be specific — a clear title helps IT agents resolve faster&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="form-group"&gt;
+        &lt;label for="ticket-desc"&gt;Description&lt;/label&gt;
+        &lt;textarea id="ticket-desc"
+          placeholder="Describe the issue in detail. Include any error messages, steps to reproduce, and when it started..."&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;div class="field-row"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="ticket-device"&gt;Affected device / software&lt;/label&gt;
+          &lt;input type="text" id="ticket-device" placeholder="e.g. Dell XPS 15, Microsoft Teams" /&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;label for="ticket-date"&gt;When did it start?&lt;/label&gt;
+          &lt;input type="date" id="ticket-date" /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="card"&gt;
+      &lt;div class="card-head"&gt;
+        &lt;h3&gt;Step 3 &amp;mdash; Set priority&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="priority-grid"&gt;
+        &lt;div class="priority-btn priority-btn--low" value="0"&gt;
+          &lt;p&gt;Low&lt;/p&gt;&lt;span&gt;Non-urgent, can wait&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="priority-btn priority-btn--med" value="1"&gt;
+          &lt;p&gt;Medium&lt;/p&gt;&lt;span&gt;Affecting work slightly&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="priority-btn priority-btn--high" value="2"&gt;
+          &lt;p&gt;High&lt;/p&gt;&lt;span&gt;Blocking my work&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class="priority-btn priority-btn--crit" value="3"&gt;
+          &lt;p&gt;Critical&lt;/p&gt;&lt;span&gt;Entire team affected&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="btn-row"&gt;
+        &lt;button class="btn-primary" id="btnSubmit"&gt;Submit ticket&lt;/button&gt;
+        &lt;button class="btn-secondary" onclick="window.location.href='home.html'"&gt;Cancel&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+&lt;/div&gt;
+
+&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+
+
+
+
+
+
+  $(document).ready(function () {
+
+
+
+
+    var ticketTitle, description, affectedDevice, ticketDate, category, priority;
+
+    document.querySelectorAll('.category-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+
+        console.log('category: ', this.getAttribute('value'))
+        // remove selected from all
+        document.querySelectorAll('.category-btn').forEach(function (item) {
+          item.classList.remove('selected');
+        });
+
+        // add selected to clicked one
+        this.classList.add('selected');
+        category = this.getAttribute('value');
+      });
+    });
+
+    $('#ticket-title').on('input', function () {
+      console.log($(this).val());
+
+      ticketTitle = $(this).val();
+      description = $('#ticket-desc').val();
+      affectedDevice = $('#ticket-device').val();
+      ticketDate = $('#ticket-date').val();
+
+      if (ticketTitle != "" &amp;&amp; description != "" &amp;&amp; affectedDevice != "" &amp;&amp; ticketDate != "") {
+        // Mark step 1 as done (already has checkmark)
+        document.getElementById("step1").classList.add("done");
+
+        // Step 2 → done (remove active)
+        let step2 = document.getElementById("step2");
+        step2.classList.remove("active");
+        step2.classList.add("done");
+
+        // Replace the number "2" with a checkmark
+        step2.querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+        // Step 3 → active
+        document.getElementById("step3").classList.add("active");
+
+      }
+
+    });
+
+    $('#ticket-desc').on('input', function () {
+
+      description = $(this).val();
+      ticketTitle = $('#ticket-title').val();
+      affectedDevice = $('#ticket-device').val();
+      ticketDate = $('#ticket-date').val();
+
+      if (ticketTitle != "" &amp;&amp; description != "" &amp;&amp; affectedDevice != "" &amp;&amp; ticketDate != "") {
+        // Step 1 → done
+        document.getElementById("step1").classList.add("done");
+
+        // Step 2 → done (remove active)
+        document.getElementById("step2").classList.remove("active");
+        document.getElementById("step2").classList.add("done");
+
+        // Replace the number "2" with a checkmark
+        document.getElementById("step2").querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+        // Step 3 → active
+        document.getElementById("step3").classList.add("active");
+
+      }
+
+
+    });
+
+    $('#ticket-device').on('input', function () {
+
+      affectedDevice = $(this).val();
+      ticketTitle = $('#ticket-title').val();
+      description = $('#ticket-desc').val();
+      ticketDate = $('#ticket-date').val();
+
+      if (ticketTitle != "" &amp;&amp; description != "" &amp;&amp; affectedDevice != "" &amp;&amp; ticketDate != "") {
+        // Step 1 → done
+        document.getElementById("step1").classList.add("done");
+
+        // Step 2 → done (remove active)
+        document.getElementById("step2").classList.remove("active");
+        document.getElementById("step2").classList.add("done");
+
+        // Replace the number "2" with a checkmark
+        document.getElementById("step2").querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+        // Step 3 → active
+        document.getElementById("step3").classList.add("active");
+
+      }
+
+
+    });
+
+    $('#ticket-date').on('input', function () {
+
+      ticketDate = $(this).val();
+      ticketTitle = $('#ticket-title').val();
+      description = $('#ticket-desc').val();
+      affectedDevice = $('#ticket-device').val();
+
+      if (ticketTitle != "" &amp;&amp; description != "" &amp;&amp; affectedDevice != "" &amp;&amp; ticketDate != "") {
+        // Step 1 → done
+        document.getElementById("step1").classList.add("done");
+
+        // Step 2 → done (remove active)
+        document.getElementById("step2").classList.remove("active");
+        document.getElementById("step2").classList.add("done");
+
+        // Replace the number "2" with a checkmark
+        document.getElementById("step2").querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+        // Step 3 → active
+        document.getElementById("step3").classList.add("active");
+
+      }
+
+
+    });
+
+    // Select all priority buttons
+    const priorityButtons = document.querySelectorAll('.priority-btn');
+
+    priorityButtons.forEach(btn =&gt; {
+      btn.addEventListener('click', () =&gt; {
+        // Remove 'selected' class from all buttons
+        priorityButtons.forEach(b =&gt; b.classList.remove('selected'));
+
+        // Add 'selected' class to the clicked button
+        btn.classList.add('selected');
+        priority = document.querySelector('.priority-btn.selected').getAttribute('value');
+
+        if (priority != "") {
+          document.getElementById("step2").classList.add("done");
+
+          // Step 2 → done (remove active)
+          document.getElementById("step3").classList.remove("active");
+          document.getElementById("step3").classList.add("done");
+
+          // Replace the number "2" with a checkmark
+          document.getElementById("step3").querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+          // Step 3 → active
+          document.getElementById("step4").classList.add("active");
+        }
+      });
+    });
+
+    document.getElementById("btnSubmit").addEventListener("click", function () {
+
+      var record = {};
+      record.it_description = document.getElementById("ticket-desc").value;
+      record.it_tickettitle = document.getElementById("ticket-title").value;
+      record.it_affecteddevice = document.getElementById("ticket-device").value;
+      record.it_startdate = document.getElementById("ticket-date").value;
+      record.it_category = category;
+      record.it_priority = priority;
+
+      webapi.safeAjax({
+        type: "POST",
+        contentType: "application/json",
+        url: "/_api/it_requests",
+        data: JSON.stringify(record),
+        success: function (data, textStatus, xhr) {
+          var newId = xhr.getResponseHeader("entityid");
+          console.log("***", newId);
+          document.getElementById("step3").classList.add("done");
+
+          // Step 2 → done (remove active)
+          document.getElementById("step4").classList.remove("active");
+          document.getElementById("step4").classList.add("done");
+
+          // Replace the number "2" with a checkmark
+          document.getElementById("step4").querySelector(".progress-num").innerHTML = "&amp;#10003;";
+
+          // Step 3 → active
+          //  document.getElementById("step4").classList.add("active");
+        },
+        error: function (xhr, textStatus, errorThrown) {
+          console.log(xhr);
+        }
+      });
+
+    })
+
+
+  })
+
+
+
+&lt;/script&gt;SubmitTicket</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>
